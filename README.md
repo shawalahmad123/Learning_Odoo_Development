@@ -1,1 +1,1 @@
-# Learning_Odoo_Development
+# Learning Odoo Development
