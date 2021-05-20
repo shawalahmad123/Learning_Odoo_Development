@@ -1,0 +1,3 @@
+exponent-server-sdk==1.0.0
+geopy
+numpy

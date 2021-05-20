@@ -1,0 +1,44 @@
+"name","code"
+"01 : Prepare Category Data","self.prepare_category_data()"
+"02 : Prepare Product Template","self.prepare_product_data()"
+"03 : Prepare Variants and asign extra prices","self.prepare_varients_and_attributes()"
+"04 : Asign MPN to Product Product","import csv
+file_path = self.get_module_path()
+#===============================================
+file_location = '/data/MPN/imac_cto_export.csv'
+product_name = 'imac'
+#file_location = '/data/MPN/imac_pro_cto_export.csv'
+#product_name = 'imac_pro'
+#file_location = '/data/MPN/macbook_air_cto_export.csv'
+#product_name = 'macbook_air'
+#file_location = '/data/MPN/macbook_pro_13_2019_cto_export.csv'
+#product_name = 'macbook_pro_13_2019'
+#file_location = '/data/MPN/macbook_pro_16_2019_cto_export.csv'
+#product_name = 'macbook_pro_16_2019'
+file_location = '/data/MPN/mac_mini_cto.csv'
+product_name = 'mac_mini'
+#===============================================
+file_location = file_path + file_location
+with open(file_location,'rU')as file:
+    data = csv.DictReader(file)
+    ProductProduct = self.env['product.product'].sudo()
+
+    for row in data:
+        domain = self.get_dynamic_domain_values(product_name=product_name,row=row)
+        if domain:
+            for each_element in domain:
+                if len(each_element) > 1:
+                    if '\xa0' in each_element[2]:
+                        tmp = each_element[2].replace('\xa0', ' ')
+                        tmp = "" "".join(tmp.split())
+                        each_element[2] = tmp
+
+            ProdProd = ProductProduct.search(domain)
+            print(domain)
+            if ProdProd and row.get('Manufacturer part no.') != row.get('Base model code'):
+                if ProdProd.default_code != row.get('Manufacturer part no.'):
+                    ProdTmpl_sku = ProdProd.product_tmpl_id.default_code if ProdProd.product_tmpl_id.default_code else ''
+                    ProdProd.write({'default_code':row.get('Manufacturer part no.'),
+                                               'lst_price':row.get('ALP'),'standard_price':row.get('DAC'),})
+                    if ProdTmpl_sku:
+                        ProdProd.product_tmpl_id.write({'default_code' : ProdTmpl_sku})"

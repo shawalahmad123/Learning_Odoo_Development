@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="product_price_ept" inherit_id="website_sale.product_price">
+        <xpath expr="//div[@itemprop='offers']" position="attributes">
+            <attribute name="t-if">
+                not user_id.partner_id.name == 'Public user'
+            </attribute>
+        </xpath>
+    </template>
+    <template id="products_item_ept" inherit_id="website_sale.products_item">
+        <xpath expr="//div[@itemprop='offers']" position="attributes">
+            <attribute name="t-if">
+                not user_id.partner_id.name == 'Public user'
+            </attribute>
+        </xpath>
+    </template>
+    <!-- Hide Add To Cart Button and quantity selector if not website_show_price -->
+    <template id="product_ept" inherit_id="website_sale.product">
+        <xpath expr="//a[@id='add_to_cart']" position="attributes">
+            <attribute name="t-if">
+                not user_id.partner_id.name == 'Public user'
+            </attribute>
+        </xpath>
+        <xpath expr="//div[@id='product_option_block']" position="attributes">
+            <attribute name="t-if">
+                not user_id.partner_id.name == 'Public user'
+            </attribute>
+        </xpath>
+    </template>
+    <template id="product_quantity_ept" inherit_id="website_sale.product_quantity">
+        <xpath expr="//div[hasclass('css_quantity')]" position="attributes">
+            <attribute name="t-if">
+                not user_id.partner_id.name == 'Public user'
+            </attribute>
+        </xpath>
+    </template>
+    <template id="product_buy_now_ept" inherit_id="website_sale.product_buy_now">
+        <xpath expr="//a[@id='buy_now']" position="attributes">
+            <attribute name="t-if">
+                not user_id.partner_id.name == 'Public user'
+            </attribute>
+        </xpath>
+    </template>
+    <template id="short_cart_summary_ept" inherit_id="website_sale.short_cart_summary">
+        <xpath expr="//a[@role='button']" position="attributes">
+            <attribute name="t-if">
+                user_id.user_role == 'l2' and website_sale_order and website_sale_order.website_order_line
+            </attribute>
+        </xpath>
+        <xpath expr="//a[@role='button']" position="after">
+            <t t-if="user_id.user_role in ['l1','l2']">
+                <a role="button" t-if="website_sale_order and website_sale_order.website_order_line"
+                   class="btn btn-primary float-right d-none d-xl-inline-block te_theme_button mb-2"
+                   href="/create_order_quote">
+                    <span>Request to quote</span>
+                </a>
+            </t>
+        </xpath>
+        <xpath expr="//a[hasclass('btn-secondary')]" position="attributes">
+            <attribute name="class">btn btn-secondary float-right d-none d-xl-inline-block te_theme_button ml-2 mb-2
+            </attribute>
+        </xpath>
+    </template>
+
+    <template id="products_add_to_cart_ept" inherit_id="website_sale.products_add_to_cart">
+        <xpath expr="//a[hasclass('a-submit')]" position="attributes">
+            <attribute name="t-if">
+                not user_id.partner_id.name == 'Public user'
+            </attribute>
+        </xpath>
+    </template>
+    <template id="add_to_wishlist_ept" inherit_id="website_sale_wishlist.add_to_wishlist">
+        <xpath expr="//button[hasclass('o_add_wishlist')]" position="attributes">
+            <attribute name="t-if">
+                not user_id.partner_id.name == 'Public user' and product_variant_id
+            </attribute>
+        </xpath>
+    </template>
+    <template id="add_to_compare_ept" inherit_id="website_sale_comparison.add_to_compare">
+        <xpath expr="//button[hasclass('o_add_compare')]" position="attributes">
+            <attribute name="t-if">
+                not user_id.partner_id.name == 'Public user' and product_variant_id
+            </attribute>
+        </xpath>
+    </template>
+    <template id="cart_ept" inherit_id="website_sale.cart">
+        <xpath expr="//div[@id='o_cart_summary']//a[@href='/shop/checkout?express=1']" position="attributes">
+            <attribute name="t-if">
+                user_id.user_role == 'l2' and website_sale_order and website_sale_order.website_order_line
+            </attribute>
+        </xpath>
+        <xpath expr="//div[@id='o_cart_summary']//a[@href='/shop/checkout?express=1']" position="attributes">
+            <attribute name="class">
+                btn btn-secondary float-right te_theme_button ml-2 mb-2
+            </attribute>
+        </xpath>
+        <xpath expr="//div[@id='o_cart_summary']//a[@href='/shop/checkout?express=1']" position="after">
+            <t t-if="user_id.user_role in ['l1','l2']">
+                <a role="button" t-if="website_sale_order and website_sale_order.website_order_line"
+                   class="btn btn-primary float-right te_theme_button mb-2"
+                   href="/create_order_quote">
+                    <span>Request to quote</span>
+                </a>
+            </t>
+        </xpath>
+        <xpath expr="//div[hasclass('oe_cart')]//a[@href='/shop/checkout?express=1']" position="attributes">
+            <attribute name="t-if">
+                user_id.user_role == 'l2' and website_sale_order and website_sale_order.website_order_line
+            </attribute>
+        </xpath>
+    </template>
+    <template id="website_sale_products_search_box_ept" inherit_id="website_sale.website_sale_products_search_box">
+        <xpath expr="//input[@name='search']" position="attributes">
+            <attribute name="t-attf-data-display-price"
+                       add="#{'false' if user_id.partner_id.name == 'Public user' else 'true'}" separator=" "/>
+            <attribute name="data-limit">5</attribute>
+            <attribute name="data-display-description">true</attribute>
+            <attribute name="data-display-image">true</attribute>
+        </xpath>
+    </template>
+        <!--==================== Display Category name related templates ============================-->
+    <template id="products_item_extended" inherit_id="website_sale.products_item">
+        <xpath expr="//h6[hasclass('o_wsale_products_item_title')]/a" position="replace">
+            <t t-if="product.category_name">
+                <a t-attf-class="product_name #{'te_2_line' if (website.number_of_product_line == '2') else 'te_3_line' if (website.number_of_product_line == '3') else ''}" itemprop="name" t-att-href="product_href" t-att-content="product.name" t-field="product.category_name" />
+            </t>
+            <t t-else="">
+                <a t-attf-class="product_name #{'te_2_line' if (website.number_of_product_line == '2') else 'te_3_line' if (website.number_of_product_line == '3') else ''}" itemprop="name" t-att-href="product_href" t-att-content="product.name" t-field="product.name" />
+            </t>
+        </xpath>
+    </template>
+
+
+    <template id="product_ept_extended_dthg" inherit_id="website_sale.product" priority="25">
+        <xpath expr="//div[@id='product_details']/h1" position="before">
+            <h1 class="te_product_name ept">Customize your: </h1>
+        </xpath>
+    </template>
+
+    <!--Theme Related Changes-->
+    <!--Accessories and Optional Product in Product Page-->
+    <!--Teheme Clarico Vega - product.xml - product_ept[template] -    -->
+<!--    <span t-att-title="alt_product.category_name if alt_product.category_name else alt_product.name" t-field="alt_product.category_name if alt_product.category_name else alt_product.name"-->
+<!--                                                          class="o_text_overflow"/>-->
+</odoo>

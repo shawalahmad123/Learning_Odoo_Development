@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <report
+        id="report_vehicles_card"
+        model="vehicle.vehicle"
+        report_type="qweb-pdf"
+        string="Print Vehicles"
+        name="new_market_place.report_vehicle"
+        file="new_market_place.report_vehicle"
+    />
+        
+</odoo>
+        

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <!-- Copyright (c) 2018-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+    <!-- See LICENSE file for full copyright and licensing details. -->
+
+    <record id="quick_order_tree_view" model="ir.ui.view">
+      <field name="name">quick_order tree view</field>
+      <field name="model">quick.order</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="user_id"/>
+          <field name="state" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="quick_order_from_view" model="ir.ui.view">
+      <field name="name">quick_order form view</field>
+      <field name="model">quick.order</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <field name="state" widget="statusbar"/>
+          </header>
+          <sheet>
+            <group col="2">
+              <h1><field name="name" readonly="True"/></h1>
+            </group>
+            <group col="2">
+              <field name="user_id" attrs="{'readonly': [('state', '=', 'done')]}" required="1"/>
+            </group>
+            <group col="2">
+              <field name="quick_order_line" attrs="{'readonly': [('state', '=', 'done')]}">
+                <tree editable="bottom">
+                    <field name="product_id"/>
+                    <field name="quantity"/>
+                </tree>
+              </field>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="quick_order_filter" model="ir.ui.view" >
+      <field name="name">quick.order.search</field>
+      <field name="model">quick.order</field>
+       <field name="arch" type="xml">
+        <search string="Search Order">
+          <filter name="Draft Order" string="Draft Order" domain="[('state','=','draft')]" />
+          <filter name="Done Order" string="Done Order" domain="[('state','=','done')]" />
+          <filter name="Shopping List" string="Shopping List" domain="[('state','=','shopping_list')]" />
+          <group string="Group By">
+            <filter name="Users Order" string="Users" domain="[]" context="{'group_by':'user_id'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <record id="quick_order_action" model="ir.actions.act_window">
+      <field name="name">Quick Order</field>
+      <field name="res_model">quick.order</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="quick_order_tree_view" />
+    </record>
+
+    <menuitem id="quick_order_sub_menu"
+          name="Quick Orders"
+          sequence="1"
+          parent="website_sale.menu_orders"
+          action="quick_order_action"
+          groups="base.group_no_one" />
+
+
+
+
+  </data>
+</odoo>

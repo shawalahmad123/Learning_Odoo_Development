@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<data>
+
+	 <record id="seq_pos_quotation" model="ir.sequence">
+        <field name="name">Salon Order</field>
+        <field name="code">waiteroo.code</field>
+        <field name="prefix">Sal/</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False" />
+    </record>
+
+
+
+
+  <record id="custom_sale_order_form_waiteroo" model="ir.ui.view">
+            <field name="name">custom.sale.order.form.waiteroo</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+            
+            
+            
+            	 <field name="state" position="attributes">
+                        <attribute name="statusbar_visible">draft,sent,sale,accepted,completed,rejected</attribute>
+                  
+                  </field>  
+            	
+            	
+             
+                <xpath expr="//notebook" position="inside">
+                    
+                  <page  name="salon_order_info" string="Salon Order Information" >
+                  
+                  	
+                  	
+                  		<group name="pos_info" string="Salon Order Info">
+                  		
+                  				
+                  			   <field name="related_seller" widget="many2one_tags" />
+                           <field name="service_type" />
+                           <!-- <field name="related_specialist" widget="many2one_tags" /> -->
+                           <field name="appointment_date" />
+                            <field name="booking_start_time" widget="time" />
+                            <field name="booking_end_time" widget="time" />
+                            
+                  			   <field name="r_comments" />
+                  			   <field name="pos_order" />
+
+					
+               			       <field name="pos_order_json" attrs="{'invisible': [('pos_order', '=', False)]}" /> 
+                  		
+                  		
+                  		</group>
+                 
+ 					
+ 					
+ 					</page>  
+  	
+  	
+                    </xpath>
+
+
+                   <xpath expr="//button[@name='preview_sale_order']" position="before">
+                		<button name="get_customer_location_google_maps" type="object" class="oe_stat_button" icon="fa-map-marker" attrs="{'invisible': [('pos_order_json', '=', False)]}" >
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Customer</span>
+                                <span class="o_stat_text">Location</span>
+                            </div>
+                        </button>
+                	
+                </xpath>
+
+
+                <xpath expr="//page/field[@name='order_line']/tree/field[@name='product_uom_qty']" position="after">
+                    
+                    <field name="related_specialist" widget="many2one_tags" readonly="1" />
+                </xpath>
+            
+                    
+             
+            </field>
+        </record> 
+        
+        
+        
+        
+</data>
+ 
+
+</odoo>

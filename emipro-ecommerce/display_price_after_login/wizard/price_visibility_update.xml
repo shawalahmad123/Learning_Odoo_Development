@@ -1,0 +1,36 @@
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- "License URL : <https://store.webkul.com/license.html/>" -->
+<odoo>
+	<data>
+		<record id="price_visibility_wizard" model="ir.ui.view">
+			<field name="name">Price Visibility Wizard</field>
+			<field name="model">price.visibility.update</field>
+			<field name="arch" type="xml">
+				<form>
+					<group>
+						<field name="price_visibility" widget="radio"/>
+					</group>
+					<footer>
+						<button
+							name  ="updateVisibility"
+							string="Update"
+							type  ="object"
+							class ="btn-primary"
+						/>
+						<button string="Cancel" class="btn-default" special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<act_window
+			id           ="price_visibility_action"
+			name         ="Price Visibility"
+			binding_model="product.template"
+			res_model    ="price.visibility.update"
+			view_mode    ="form"
+			target       ="new"
+		/>
+	</data>
+</odoo>

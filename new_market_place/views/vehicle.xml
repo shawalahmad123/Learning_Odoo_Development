@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="vehicle_tree" model="ir.ui.view">
+        <field name="name">vehicle.vehicle.tree</field>
+        <field name="model">vehicle.vehicle</field>
+        <field name="arch" type="xml">
+            <tree string="Vehicles">
+                <field name="vehicle_name" />
+                <field name="user_id" />
+                <field name="vehicle_type" />
+                <field name="vehicle_tires" />
+                <field name="vehicle_wheels" />
+                <field name="vehicle_modal" />
+                <field name="vehicle_company" />
+                <field name="vehicle_notes" />
+                <field name="vehicle_image" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="vehicle_view_form" model="ir.ui.view">
+        <field name="name">vehicle.vehicle.view.form</field>
+        <field name="model">vehicle.vehicle</field>
+        <field name="arch" type="xml">
+            <form string="Vehicle Form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="vehicle_name" />
+                        </group>
+                        <group>
+                            <field name="user_id" />
+                        </group>
+                        <group>
+                            <field name="vehicle_type" />
+                        </group>
+                        <group>
+                            <field name="vehicle_wheels" />
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="vehicle_modal" />
+                        </group>
+                        <group>
+                            <field name="vehicle_tires" />
+                        </group>
+                        <group>
+                            <field name="vehicle_company" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="vehicle_notes" />
+                        <field name="vehicle_image" widget="image"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_vehicle" model="ir.actions.act_window">
+        <field name="name">Vehicles</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vehicle.vehicle</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to add a first vehicle in your list.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="vehicle_root" name="Vehicle" web_icon="new_market_place,static/description/icon.png" action="action_vehicle"/>
+    <menuitem id="open_vehicle_menu" name="Vehicle" parent="vehicle_root"/>
+    <menuitem id="vehicle_vehicles" name="Vehicles List" parent="open_vehicle_menu" action="action_vehicle"/>
+
+    <record id="vehicle_tyre_tree" model="ir.ui.view">
+        <field name="name">vehicle.tyre.tree</field>
+        <field name="model">vehicle.tyre</field>
+        <field name="arch" type="xml">
+            <tree string="Vehicles">
+                <field name="name" />
+                <field name="company" />
+                <field name="notes" />
+                <field name="image" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="vehicle_tyre_form" model="ir.ui.view">
+        <field name="name">vehicle.tyre.form</field>
+        <field name="model">vehicle.tyre</field>
+        <field name="arch" type="xml">
+            <form string="Vehicle Form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <field name="company" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="notes" />
+                        <field name="image" widget="image"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_tyre" model="ir.actions.act_window">
+        <field name="name">Tires</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vehicle.tyre</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to add a first tyre in your list.
+            </p>
+        </field>
+    </record>
+    
+    <menuitem id="open_vehicle_tires_menu" name="Tires List" parent="open_vehicle_menu" action="action_tyre"/>
+        
+</odoo>

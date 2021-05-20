@@ -1,0 +1,23 @@
+{
+    'name': 'New Market Place',
+    'version': '13.0.1.0.0',
+    'summary': 'New Market Place',
+    'category': 'Salon',
+    'author': 'Pandoratech',
+    'maintainer': 'Pandoratech',
+    'company': 'Pandora Desgin',
+    'website': 'https://pandoratech.ae',
+    'depends': [],
+    'description': """New Market Place""",
+    'data': [
+       'security/ir.model.access.csv',
+       'security/security.xml',
+       'views/vehicle.xml',
+       'views/tires.xml',
+       'report/vehicle_card.xml',
+       'report/report.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+}

@@ -1,0 +1,22 @@
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- "License URL : <https://store.webkul.com/license.html/>" -->
+<odoo>
+	<data noupdate="1">
+		<record id="price_config_login" model="price.config.settings">
+			<field name="name">Login Price Config</field>
+			<field name="is_active">True</field>
+			<field name="global_price_visibility">login</field>
+		</record>
+
+		<record id="product.consu_delivery_02" model="product.product">
+			<field name="price_visibility">show</field>
+		</record>
+		<record id="product.consu_delivery_01" model="product.product">
+			<field name="price_visibility">login</field>
+		</record>
+		<record id="product.product_product_4_product_template" model="product.template">
+			<field name="price_visibility">contact</field>
+		</record>
+	</data>
+</odoo>

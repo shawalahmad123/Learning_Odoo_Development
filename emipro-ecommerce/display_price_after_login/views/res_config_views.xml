@@ -1,0 +1,83 @@
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- "License URL : <https://store.webkul.com/license.html/>" -->
+<odoo>
+	<record id="dpal_config_conf_view" model="ir.ui.view">
+		<field name="name">Price Config Form</field>
+		<field name="model">price.config.settings</field>
+		<field name="arch" type="xml">
+			<form class="oe_form_configuration">
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button
+							name ="toggle_is_active"
+							type ="object"
+							class="oe_stat_button"
+							icon ="fa-check"
+							title="Toggle"
+							aria-label="Toggle"
+						>
+							<field
+								name   ="is_active"
+								widget ="boolean_button"
+								options='{"terminology":"active"}'
+							/>
+						</button>
+					</div>
+					<div class="oe_title">
+						<h1><field name="name"/></h1>
+						<h3><field name="website_id"/></h3>
+					</div>
+					<separator class="fa fa-eye" string="  Price" title="Price" aria-label="Price"/>
+					<group>
+						<group col="2">
+							<field name="global_price_visibility" widget="radio"/>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+		
+	<record id="dpal_settings_tree" model="ir.ui.view">
+		<field name="name">Price Config Tree</field>
+		<field name="model">price.config.settings</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name"/>
+				<field name="is_active"/>
+				<field name="website_id"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_dpal_config_conf" model="ir.actions.act_window">
+		<field name="name">Save Price Config</field>
+		<field name="res_model">price.config.settings</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<record id="dpal_config" model="ir.ui.view">
+		<field name="name">Addons Setting</field>
+		<field name="model">webkul.website.addons</field>
+		<field name="inherit_id" ref="website_webkul_addons.config_webkul_website_addons_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//table[1]/tbody" position="inside">
+				<tr>
+					<td>2</td>
+					<td><label for="module_display_price_after_login"/></td>
+					<td><field name="module_display_price_after_login"/></td>
+					<td name="module_display_price_after_login">
+						<button
+							type  ="action"
+							name  ="%(action_dpal_config_conf)d"
+							string="Configuration"
+							class ="oe_link"
+						/>
+					</td>
+				</tr>
+			</xpath>
+		</field>
+	</record>
+</odoo>

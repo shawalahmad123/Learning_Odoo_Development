@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <!-- Copyright (c) 2018-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+    <!-- See LICENSE file for full copyright and licensing details. -->
+
+     <template id="header" inherit_id="website.layout" name="Quick Order" customize_show="True">
+        <xpath expr="//header//ul[@id='top_menu']/li" position="before">
+            <t t-set="website_sale_order" t-value="website.sale_get_order()" />
+            <li class="nav-item" id="my_cart">
+                <t t-set="langConfig" t-value="request.env['res.lang'].search([('code','=',request.env.lang)])" />
+                <a id="lanfConfig" class="nav-link" href="/quickorder" t-att-decimal_point="langConfig.decimal_point" t-att-thousands_sep="langConfig.thousands_sep" t-att-grouping="langConfig.grouping">
+                  <i class="fa fa-bolt"></i> Quick Orders
+                </a>
+            </li>
+        </xpath>
+    </template>
+
+     <template id="quick_search_main_template">
+       <t t-call="website.layout">
+        <div class="container container-text">
+          <div class="outer">
+            <div >
+              <div class="row" >
+                  <div class="col-md-9">
+                    <h2 style="margin-top: 15px;" >Quick Order</h2>
+                    <p class="text-body">Create &amp; save your own shopping list for quick checkout.</p>
+                  </div>
+                   <div class="sp-mn-button col-md-3">
+                     <t t-call="quick_order.shopping_list_hover_button" />
+                   </div>
+              </div>
+             </div>
+          </div>
+          <div class="row">
+            <div class="outer col-5 order-1" >
+              <t t-set="table_hreader_render" t-value="True if request.httprequest.full_path.startswith('/quickorder/shoppinglist') else False"/>
+              <p t-if="not table_hreader_render" class="text-muted" style="margin-bottom: 0px;font-size: 12px;font-weight: bold;">ADDED PRODUCTS</p>
+              <div class="panel-create alert-error" id="no_products" t-att-style="'display:block;' if not order_quicks else 'display:none;'" >
+                <div class="" style="text-align:center;">
+                  <img  src="/quick_order/static/src/img/empty-illustration.png" style="height: 50px; width: 50px;"/>
+                  <br/>
+                  <p><t t-esc="error['error']" /></p>
+                </div>
+              </div>
+              <div class="panel-create alert-success" style="display:none;"></div>
+              <div class="col-md-12" t-att-style="'display:block;' if order_quicks else 'display:none;'" id="order_quick_table"><t t-call="quick_order.add_to_cart_mutliple" /></div>
+            </div>
+            <div class="outer col-7 order-0"  id="body">
+              <p class="text-muted" style="margin-bottom: 0px;font-size: 12px;font-weight: bold;">SELECT PRODUCTS TO ADD</p>
+              <div style="margin: 4px 0px 8px 0px;padding: 0px 12px 12px 12px;box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);">
+                 <div class="col-md-12" style="padding: 0px;">
+                     <div class="card card-default add_to_cart" style="border: none; border-bottom: 1px solid #dee2e6">
+                       <div class="card-body">
+                         <div class="row" style="margin: 0px;justify-content: space-between;">
+                           <div>
+                             <form method="get" class="form" id="search_quick_render">
+                                 <t t-call="website.website_search_box" >
+                                   <t t-set="search_class" t-value="'pagination form-inline o_website_sale_search'"/>
+                                 </t>
+                             </form>
+                           </div>
+                           <div class="row">
+                             <button id="refresh_table" class="btn btn-primary"><i class="fa fa-refresh" ></i></button>
+                             <div style="padding: 0px;">
+                               <div id="top_pager">
+                                 <ul t-if="pager['page_count'] > 1" t-attf-class="ml-2 #{ classname or '' } pagination" t-att-style="style or None">
+                                     <li t-att-class=" 'disabled' if pager['page']['num'] == 1 else None ">
+                                         <a t-att-href=" pager['page_previous']['url'] if pager['page']['num'] != 1 else None" class="left-prev-link page-link" ><i class="fa fa-arrow-left"></i></a>
+                                     </li>
+                                     <li t-att-class=" 'disabled' if pager['page']['num'] == pager['page_count'] else None ">
+                                         <a t-att-href="pager['page_next']['url'] if pager['page']['num'] != pager['page_count'] else None" class="right-next-link page-link"><i class="fa fa-arrow-right" ></i></a>
+                                     </li>
+                                 </ul>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                   </div>
+                 </div>
+                 <div id="search_table_render_here">
+                   <t t-call="quick_order.main_table_data" />
+                 </div>
+             </div>
+             <div id="row_select_model" />
+             <t t-call="quick_order.shopping_list_confirm_model" />
+            </div>
+          </div>
+        </div>
+       </t>
+     </template>
+
+     <template id="main_table_data">
+       <div t-if="products" class="table-content col-md-12" style="padding:0px;" id="tableitems">
+
+         <div class="table-items table-responsive custom-scroll-bar">
+           <div class="load-search">
+             <div class="load-search-data">
+               <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+               <span class="sr-only">Loading...</span>
+             </div>
+           </div>
+           <table class="table table-striped mb-0">
+             <thead>
+               <tr>
+                   <th class="text-black-50">INTERNAL REFERENCE</th>
+                   <th class="text-black-50">PRODUCT</th>
+                   <th class="text-black-50">PRICE </th>
+                   <th />
+               </tr>
+             </thead>
+             <tbody >
+               <t t-foreach="products" t-as="product">
+                 <tr class="clickable" t-att-data-oe-id = "product.id">
+                   <td style="width: 35%;"><div class="slid-up-table"><t t-esc="product.default_code" /></div></td>
+                   <td class="col-md-4" >
+                     <div class="slid-up-table">
+                       <div class="row">
+                         <div class="col-4 col-md-3 hide-img-tbl">
+                           <a t-attf-href="/shop/product/#{ slug(product) }">
+                             <span t-field="product.image_1920" t-options="{'widget': 'image', 'class': 'img-rounded'}" />
+                           </a>
+                         </div>
+                          <div class="col-8 col-md-9 padding-left">
+                            <a t-attf-href="/shop/product/#{ slug(product) }" style="font-weight: bold;"><t t-esc="product.name" /></a>
+                          </div>
+                       </div>
+                     </div>
+                   </td>
+                   <td class="col-md-2">
+                     <div class="slid-up-table">
+                       <b>
+                         <t t-set="combination_info" t-value="product._get_combination_info(only_template=True, add_qty=add_qty or 1, pricelist=pricelist)"/>
+                          <t t-if="True">
+                              <del t-attf-class="text-danger mr8 {{'' if combination_info['has_discounted_price'] else 'd-none'}}" style="white-space: nowrap;" t-esc="combination_info['list_price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                          </t>
+                          <span t-if="combination_info['price']" t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                          <span itemprop="price" style="display:none;" t-esc="combination_info['price']" />
+                          <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+                        </b>
+                      </div>
+                   </td>
+                   <td>
+                     <div class="slid-up-table">
+                       <button class="btn btn-primary" id="add_in_orderline"><span class="fa fa-plus" /></button>
+                     </div>
+                   </td>
+                 </tr>
+               </t>
+             </tbody>
+             <tr t-if="pager['page_count'] > 1" id="tr">
+               <td class="col-md-12" colspan="4">
+                 <div class="col-md-12 pager">
+                   <div class="pager-page"><t t-call="quick_order.pagination" /></div>
+                 </div>
+               </td>
+             </tr>
+           </table>
+         </div>
+       </div>
+       <div t-if="not products" ><t t-call="quick_order.404" /></div>
+     </template>
+
+     <template id="pagination" >
+       <ul t-if="pager['page_count'] > 1" t-attf-class="#{ classname or '' } pagination  m-0 ml-2" t-att-style="style or None">
+           <li t-att-class=" 'page-item disabled' if pager['page']['num'] == 1 else 'page-item' ">
+               <a class="page-link" t-att-href=" pager['page_previous']['url'] if pager['page']['num'] != 1 else None"><i class="fa fa-caret-left"></i></a>
+           </li>
+           <t t-foreach="pager['pages']" t-as="page">
+               <li t-att-class=" 'active page-item' if page['num'] == pager['page']['num'] else 'page-item' "> <a class="page-link" t-att-href="page['url']" t-raw="page['num']"></a></li>
+           </t>
+           <li t-att-class=" 'page-item disabled' if pager['page']['num'] == pager['page_count'] else 'page-item' ">
+               <a class="page-link" t-att-href="pager['page_next']['url'] if pager['page']['num'] != pager['page_count'] else None"><i class="fa fa-caret-right"></i></a>
+           </li>
+       </ul>
+     </template>
+
+     <template id="row_select_model">
+       <div class="modal modal-variants fade">
+         <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h4 class="mb-0">Select Variants</h4>
+                 <button type="button" class="close close-m" data-dismiss="modal"><span class="fa fa-times" /></button>
+               </div>
+               <div class="modal-body">
+                 <div class="variants-c">
+                   <h5 id="product_name" class="mb-2"><t t-esc="docs.name" /></h5>
+                   <div style="display: inline-block">
+                     <label class="select_all_variants text-dark mb-4">
+                       <input type="checkbox"/>
+                       <span class="check-modal" /> Select All
+                     </label>
+                   </div>
+                   <div>
+                     <t t-foreach="docs.product_variant_ids" t-as="var" >
+                       <div class="row variants" t-if="var.id in not_id and var.product_tmpl_id._is_combination_possible(var.product_template_attribute_value_ids)" t-att-data-oe-id = "var.id">
+                         <div class="col-md-2 col-2 col-xs-3"><span t-field="var.image_1920" t-options="{'widget': 'image', 'class': 'img-rounded img-rounded o_image_64_max'}" /></div>
+                         <div>
+                           <span class="text-muted"  t-if="var.default_code" ><strong>Refferal No : <t t-esc="var.default_code" /></strong></span>
+                           <div>
+                             <label class="deselect-variants">
+                               <input type="checkbox"/>
+                               <span class="check-modal"></span>
+                               <div class="variants-s">
+                                 <t t-foreach="var.product_template_attribute_value_ids" t-as="attr">
+                                    <span class="badge badge-pill badge-secondary"><t t-esc="attr.display_name" /></span>
+                                 </t>
+                               </div>
+                             </label>
+                           </div>
+                         </div>
+                       </div>
+                     </t>
+                   </div>
+                 </div>
+               </div>
+               <div class="modal-footer">
+                   <p class="variants-error alert alert-danger">Please select at least one variant</p>
+                   <button type="button" class="btn btn-primary" id="addToList">Add To List</button>
+                   <button type="button" class="btn btn-secondary close-m" data-dismiss="modal">Close</button>
+               </div>
+           </div>
+         </div>
+       </div>
+     </template>
+
+     <template id="add_to_cart_mutliple">
+       <t t-set="table_hreader_render" t-value="True if request.httprequest.full_path.startswith('/quickorder/shoppinglist') else False"/>
+       <div class="table-content" id="table_added" style="margin: 4px 0px 8px 0px;padding: 12px;box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);">
+         <div t-if="order_quicks">
+           <t t-set="order_quicks" t-value="order_quicks"/>
+         </div>
+         <div t-if="shopping_lists">
+           <t t-set="order_quicks" t-value="shopping_lists.quick_order_line"/>
+         </div>
+         <div class="table-items table-responsive custom-scroll-bar scroll-limit" >
+           <table class="table" t-att-data_id="id" id="table_order">
+             <thead t-if="table_hreader_render">
+               <tr>
+                   <th class="text-black-50">PRODUCT</th>
+                   <th class="text-black-50"></th>
+                   <th class="text-black-50">QUANTITY</th>
+                   <th class="text-black-50">UNIT PRICE</th>
+                   <th class="text-black-50">SUB TOTAL</th>
+               </tr>
+             </thead>
+             <tbody class="main_add_to_cart">
+                 <t t-call="quick_order.add_to_cart_mutliple_body" />
+             </tbody>
+           </table>
+         </div>
+         <div>
+           <tr id="tr">
+             <td colspan="6">
+               <div class="row" style="justify-content: space-between;margin: 0px;border-top: 1px solid #dee2e6;padding: 12px 0px;">
+                 <button t-if="table_hreader_render" t-att-style="'display:block;' if order_quicks else 'display:none;'" class="btn btn-primary" id="create_order">Create Order</button>
+                 <div t-if="not table_hreader_render" class="dl-all">
+                   <a class="text-black-50" href="#" t-att-style="'font-weight: bold;    text-decoration: none !important;' if order_quicks else 'display:none;'" id="clear_all">
+                     <span class="fa fa-trash" /> Clear all
+                   </a>
+                 </div>
+                 <div class="total">Total : <t t-esc="round(sum([compute_currency(price.product_id.lst_price) for price in order_quicks]), 2)" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/><p style="margin: 0px;">Total Qty. : </p></div>
+               </div>
+               <div t-if="not table_hreader_render" class="row" style="justify-content: flex-end;margin:0px;">
+                 <div t-if="not shopping_lists" class="mr-2">
+                   <t t-call="quick_order.shopping_list_button" />
+                 </div>
+                 <div t-if="shopping_lists"></div>
+                 <t t-call="quick_order.add_to_shopping_list_model" />
+                 <button t-att-style="'display:block;' if order_quicks else 'display:none;'" class="btn btn-primary" id="create_order">Create Order</button>
+               </div>
+             </td>
+           </tr>
+         </div>
+       </div>
+     </template>
+
+     <template id="add_to_cart_mutliple_body" >
+       <t t-foreach="order_quicks" t-as="product" t-if="order_quicks">
+        <t t-set="price_list" t-value="website.get_current_pricelist()" />
+        <t t-set="combination_info" t-value="product.product_id.product_tmpl_id._get_combination_info(product_id=product.product_id.id, add_qty=product.quantity, pricelist=pricelist )"/>
+        <tr t-att-item_id="product.product_id.id" t-att-temp_id="product.product_id.product_tmpl_id.id" t-att-line_id="product.id" t-att-data_id="id" t-if="product.product_id.id in product_r">
+        <t t-set="table_hreader_render" t-value="True if request.httprequest.full_path.startswith('/quickorder/shoppinglist') else False"/>
+          <td>
+             <div class="slid-up-table">
+               <t t-set="img_class" t-value="'img-rounded o_image_64_max' if table_hreader_render else 'img-rounded'" />
+               <a t-attf-href="/shop/product/#{ slug(product.product_id.product_tmpl_id) }"><span t-field="product.product_id.image_1920" t-options="{'widget': 'image', 'class': img_class}" /></a>
+             </div>
+           </td>
+           <td>
+             <div class="slid-up-table">
+               <a t-attf-href="/shop/product/#{ slug(product.product_id.product_tmpl_id) }" style="font-weight: bold;">
+                 <t t-esc="product.product_id.name" />
+               </a>
+               <p t-if="product.product_id.attribute_line_ids" style="margin-bottom: 0px;">
+                 <t t-foreach="product.product_id.product_template_attribute_value_ids" t-as="attr">
+                    <t t-esc="attr.display_name" />
+                 </t>
+               </p>
+               <a class="delete_product text-danger"><span class="fa fa-trash"> <span>Remove</span></span></a>
+            </div>
+            </td>
+           <td>
+             <div class="slid-up-table">
+               <div class="input-group input-group-sm">
+                 <div class="input-group-prepend">
+                    <a t-attf-href="#" class="mb8 input-group-text add-product" id="minus" style="border: 1px solid #c2c2c2;margin-bottom:0px !important;text-decoration: none;">
+                      <i class="fa fa-minus"></i>
+                     </a>
+                 </div>
+                <input type="number" class="form-control qunatity-product" style="width: 40px;" id="qunatity" t-att-value="product.quantity" />
+                <div class="input-group-append">
+                  <a t-attf-href="#" class="mb8 input-group-text float_left add-product" id="plus" style="border: 1px solid #c2c2c2; margin-bottom:0px !important;text-decoration: none;">
+                    <i class="fa fa-plus"></i>
+                  </a>
+                </div>
+               </div>
+               <div class="quick_order_stock"/>
+             </div>
+           </td>
+           <td id="lst_price"><div class="slid-up-table">
+             <t t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/></div>
+           </td>
+           <td id="sub_total" t-att-class="'d-none' if not table_hreader_render else ''"><div class="slid-up-table"><t t-esc="compute_currency(combination_info['price']*float(product.quantity))" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/></div></td>
+         </tr>
+       </t>
+     </template>
+
+     <template id="shopping_list_button">
+         <div class="dropdown dropdown-button" >
+            <a style="text-decoration: none; padding: 0px !important;" href="#" data-toggle="dropdown" class="btn btn-drp dropdown-toggle">
+              <div class="btn-group">
+                <button type="button" class="btn btn-gp">Add To Shopping List</button>
+                <button type="button" class="btn btn-gp"><i class="fa fa-chevron-down"></i></button>
+              </div>
+            </a>
+            <ul class="dropdown-menu custom-scroll-bar">
+              <t t-foreach="shopping_list" t-as="user">
+                <li id="create_new_sp_list" class="create_new_list" t-att-value="user.id"><t t-esc="user.name" /></li>
+              </t>
+                <li id="create_new_sp_list" class="last-li create add-list create_new_list"><div>+ Create new shopping list</div></li>
+            </ul>
+          </div>
+     </template>
+
+     <template id="shopping_list_hover_button">
+       <div class="hover_button">
+         <div class="dropdown dropdown-button" >
+            <a href="/quickorder/shoppinglist" class="dropdown-hover">
+              <div class="btn-group">
+                <button type="button" class="btn btn-warning">Shopping List</button>
+                <button type="button" class="btn btn-warning hover-single-fa"><i class="fa fa-chevron-down" ></i></button>
+              </div>
+            </a>
+            <t t-call="quick_order.shopping_cart" />
+          </div>
+       </div>
+     </template>
+
+     <template id="shopping_cart">
+       <ul class="dropdown-menu dropdown-hover custom-scroll-bar" style="max-height: 250px;" id="ul_append" >
+         <li t-if="not shopping_list" style="text-align:center;">
+           <label>Your Shopping List is empty</label>
+         </li>
+         <t t-foreach="shopping_list" t-as="user">
+           <li id="create_new_sp_list" t-att-value="user.id">
+             <div class="li-content">
+               <label><t t-esc="user.name" /></label>
+               <div class="row">
+                 <div><t t-esc="sum([x.quantity for x in user.quick_order_line])" /> items</div>
+                 <label  style="color:#428bca;">|</label>
+                 <div class="li-right"><t t-esc="sum([compute_currency(p._get_product_price()) for p in user.quick_order_line])" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" /></div>
+               </div>
+               <div><a t-att-href="'/quickorder/shoppinglist/%s'%(user.id)" >View Details</a></div>
+             </div>
+           </li>
+         </t>
+       </ul>
+     </template>
+
+     <template id="shopping_list_confirm_model">
+       <div class="modal modal-confirm fade">
+         <div class="modal-dialog modal-sm">
+           <div class="modal-content">
+               <div class="modal-body">
+                 <button type="button" class="close-m close" aria-label="Close">
+                   <span class="fa fa-times" />
+                 </button><br/>
+                 <p><strong>Are you sure to add products in your Shopping List</strong></p>
+                 <div class="row">
+                   <button class="col-md-3 btn btn-primary" id="submit_shopping_cart"  style="margin-left:14px;">Ok</button>
+                   <button class="col-md-3 btn close-m" style="margin-left:10px; color:black;" >Cancel</button>
+                 </div>
+               </div>
+           </div>
+         </div>
+       </div>
+     </template>
+
+     <template id="add_to_shopping_list_model">
+       <div class="modal modal-setName fade">
+         <div class="modal-dialog modal-sm">
+           <div class="modal-content">
+                <div class="modal-header">
+                   <h4 class="mb-0">Create Shopping List</h4>
+                   <button type="button" class="close close-m" data-dismiss="modal"><span class="fa fa-times" /></button>
+                </div>
+               <div class="modal-body">
+                 <label><strong>Shopping List Name</strong></label>
+                 <input type="text" class="form-control" placeholder="enter shopping list name" id="shopping_list_name" autofocus="true"/>
+                 <p class="null_name_shopping_list alert alert-danger mb-0 mt-2" style="display: none;">Please provide a name to the Shopping list</p><br/>
+
+               </div>
+               <div class="modal-footer">
+                 <button class="btn btn-primary" style="margin-left:14px;" id="submit_shopping_cart">Submit</button>
+                 <button type="button" class="btn btn-secondary close-m" data-dismiss="modal">Cancel</button>
+               </div>
+           </div>
+         </div>
+       </div>
+     </template>
+
+     <template id="shopping_list">
+       <t t-call="website.layout">
+         <div class="container container-text">
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                    <h4 class="modal-title">RENAME SHOPPING LIST</h4>
+                  <label style="margin-top:25px;"><strong>Enter the Shopping List name</strong></label>
+                  <input type="text" class="form-control e-sp-l-name" autofocus="true" placeholder="enter the shopping list name"/>
+                  <p style="color:red; display:none;">Shopping List name is not empty.</p>
+                  <div style="margin-top:20px;">
+                    <button type="button" class="btn btn-primary e-sp-up-name">Submit</button>
+                    <button type="button" class="btn btn-default" style="color:black; background-color:#ebebeb" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div style="padding-bottom: 50px;">
+             <div class="outer" style="padding-top: 10px;">
+               <div class="row">
+                 <div class="col-md-9">
+                   <h2 style="margin-top: 15px;" >Quick Order</h2>
+                   <p class="text-body">Create &amp; save your own shopping list for quick checkout.</p>
+                 </div>
+                  <div class="col-md-3">
+                    <div class="sp-mn-button" style="padding-bottom: 10px;margin-top: 0px;">
+                      <t t-call="quick_order.shopping_list_hover_button" />
+                    </div>
+                  </div>
+               </div>
+               <div class="panel-create alert-success" style="display:none;"></div>
+               <div t-if="not shopping_lists"><t t-call="quick_order.404" /></div>
+             </div>
+             <t t-foreach="shopping_lists" t-as="shopping">
+                <div class="outer" t-att-id="shopping.id">
+                    <div class="inner">
+                      <div class="panel-shopping oe-get_shopping_list " t-att-ids="shopping.id" >
+                        <div class="row" id="check">
+                          <h4 class="col-4 col-md-3 col-xs-12 e-p-s-list-name inner_z_index mb-0" t-att-no="shopping.id"><t t-esc="shopping.name" />
+                            <span class="open-e-sp-name"><i class="fa fa-pencil-square-o"></i></span>
+                          </h4>
+                          <div class="col-3 col-md-2 col-xs-5 inner_z_index">
+                            <a class="fun fun-create_order" style="margin-top: 0px;font-weight: bold;color:#428bca;">Create Order</a>
+                          </div>
+                          <a class="col-3 offset-md-4 col-md-2 col-xs-5 link delete-list fun inner_z_index" style="font-weight: bold;">Delete List</a>
+                          <div t-if="len(shopping_lists) > 1" class="col-1 col-md-1 chevron-down"><i class="fa fa-chevron-down icon-round"></i></div>
+                          <div t-if="len(shopping_lists) > 1" class="col-1 col-md-1 chevron-up"><i class="fa fa-chevron-up icon-round"></i></div>
+                        </div>
+                      </div>
+                      <div t-if="len(shopping_lists) != 1" t-att-render="shopping.id" class="shopping-id"></div>
+                      <div t-if="len(shopping_lists) == 1"><t t-call="quick_order.add_to_cart_mutliple" /></div>
+                    </div>
+                </div>
+              </t>
+            </div>
+         </div>
+       </t>
+     </template>
+
+     <template id="404">
+       <div class="panel-create alert-error">
+         <div class="" style="text-align:center;">
+           <img  src="/quick_order/static/src/img/empty-illustration.png" />
+           <br/><br/><br/>
+           <p><t t-esc="error['s_error']" /></p>
+         </div>
+       </div>
+     </template>
+
+     <template id="quick_order_done_data" inherit_id="portal.portal_my_home">
+       <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+          <t t-call="portal.portal_docs_entry">
+              <t t-set="title">Quick Orders</t>
+              <t t-set="url" t-value="'/my/quickorder'"/>
+              <t t-set="count" t-value="total_quick_order"/>
+          </t>
+       </xpath>
+     </template>
+
+     <template id="portal_my_quick_order" name="My Quick Order">
+      <t t-call="portal.portal_layout">
+        <t t-set="breadcrumbs_searchbar" t-value="True"/>
+        <t t-call="portal.portal_searchbar">
+            <t t-set="title">Quick Order</t>
+        </t>
+        <t t-if="not quick_orders">
+            <p>There are currently no quick order for your account.</p>
+        </t>
+        <t t-if="quick_orders" t-call="portal.portal_table">
+          <thead>
+            <tr class="active">
+                <th>QUICK ORDER #</th>
+                <th>CREATED DATE</th>
+                <th>ORDER DATE</th>
+                <th>TOTAL PRODUCTS</th>
+                <th></th>
+              </tr>
+          </thead>
+          <t t-foreach="quick_orders" t-as="quick_order">
+              <tr>
+                  <td>
+                      <a t-att-href="'/my/quickorder/%s'%quick_order.id"><t t-esc="quick_order.name"/></a>
+                  </td>
+                  <td><span ><t t-esc="quick_order.create_date"/></span></td>
+                  <td><span ><t t-esc="quick_order.write_date"/></span></td>
+                  <td><span class="badge"><t t-esc="len(quick_order.quick_order_line.ids)"/></span></td>
+                  <td>
+                      <a class="label label-primary" style="padding-right:10px; font-weight:100;" t-att-href="'/my/quickorder/update?id=%s&amp;action=%s'%(quick_order.id,'re-order')">Re-Order</a>
+                      <a class="label label-info" style="padding-left:10px; font-weight:100;" t-att-href="'/my/quickorder/update?id=%s&amp;action=%s'%(quick_order.id,'shopping-list')">Add To Shopping List</a>
+                  </td>
+              </tr>
+          </t>
+        </t>
+      </t>
+    </template>
+
+    <template id="portal_my_home_menu_sale" name="Portal layout : quick order menu entries" inherit_id="portal.portal_breadcrumbs" priority="20">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'quick_order'" class="breadcrumb-item">Quick Order</li>
+            <t t-if="page_name == 'quick_products'">
+              <li class="breadcrumb-item">
+                    <a href="/my/quickorder">Quick Order</a>
+              </li>
+              <li class="breadcrumb-item">
+                    <t t-esc="name" />
+              </li>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="portal_my_quick_order_details">
+      <t t-call="portal.portal_layout">
+        <t t-if="not quick_order">
+            <p>There are currently no product in your quick order.</p>
+        </t>
+        <t t-set="breadcrumbs_searchbar" t-value="True"/>
+        <t t-call="portal.portal_searchbar">
+            <t t-set="title"><t t-esc="name" /></t>
+        </t>
+        <t t-if="quick_order" t-call="portal.portal_table">
+          <thead>
+            <tr class="active">
+                <th>INTERNAL REFERENCE #</th>
+                <th style="text-align: left;">IMAGE</th>
+                <th>PRODUCT</th>
+                <th>QUANTITY</th>
+                <th>UNIT PRICE</th>
+            </tr>
+          </thead>
+          <t t-foreach="quick_order" t-as="product">
+              <tr>
+                  <td><t t-esc="product.product_id.default_code" /></td>
+                  <td><span t-field="product.product_id.image_1920" t-options="{'widget': 'image', 'class': 'img-rounded o_image_64_max'}" /></td>
+                  <td><t t-esc="product.product_id.name" /></td>
+                  <td><t t-esc="product.quantity" /></td>
+                  <td><t t-esc="compute_currency(product.product_id.lst_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/></td>
+              </tr>
+          </t>
+        </t>
+      </t>
+    </template>
+
+    <template id="quick_order_public_user_sugges">
+      <t t-call="website.layout">
+        <div class="container" style="margin-top:50px;">
+          <div class="panel panel-primary">
+    				<div class="panel-heading">
+    					<h3 class="panel-title"><strong>Quick Order</strong></h3>
+    				</div>
+        		<div class="panel-body">
+              <p><i class="fa fa-star"></i>  The Quick Order feature lets you add the products in the shopping cart in quick succession.</p>
+              <p><i class="fa fa-star"></i>  Do your bulk Shopping in a few minutes.</p>
+              <p><i class="fa fa-star"></i>  Browse entire product catalog quickly to mass order products from the website.</p>
+              <p><i class="fa fa-star"></i>  Create multiple priority shopping lists in your account and add them directly to cart whenever you need.</p>
+
+              <div class="row" style="margin-left:10px;margin-right:10px;">
+                To use Quick Order feature you need sign in to your account. <a href="/web/login" >Log In</a> or <a href="/web/signup" >Create an account</a>.
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </t>
+    </template>
+
+  </data>
+</odoo>

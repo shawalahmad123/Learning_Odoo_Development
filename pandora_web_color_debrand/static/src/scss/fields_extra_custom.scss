@@ -1,0 +1,61 @@
+ .o_input {
+    border: 1px solid #ccc;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+}
+//
+// This file regroups all the rules which apply to field widgets wherever they
+// are in the DOM, in the community version.
+//
+
+// Required
+.o_required_modifier {
+    &.o_input, .o_input {
+        border-bottom: 2px solid #666666;
+		background-color:transparent !important
+    }
+}
+
+
+
+//------------------------------------------------------------------------------
+// Fields
+//------------------------------------------------------------------------------
+
+.o_field_widget {
+    
+
+    // Many2one#
+    &.o_field_many2one .o_external_button {
+       color: $o-brand-odoo;
+        
+    }
+
+    
+}
+
+
+
+ // Button box
+    .oe_button_box {
+       
+
+
+        .oe_stat_button {
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.03) !important;
+            }
+            .o_button_icon {
+                color: #666666 !important;
+            }
+        }
+    }
+
+
+
+.o_form_sheet_bg {
+        border-bottom: 1px solid #dee2e6 !important;
+        background: #f9f9f9 !important;
+}
+

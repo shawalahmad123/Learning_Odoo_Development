@@ -1,0 +1,437 @@
+"Class","Model","Categories","Status",,"Desc","DAC","ALP inc VAT"
+"iMac Pro","MQ2Y2B/A","Processor","Default Value","3.2GHz","3.2GHz 8-core Intel Xeon W processor, Turbo Boost up to 4.2GHz",0,0
+"iMac Pro","MQ2Y2B/A","Processor","Alternatives","3.0GHz","3.0GHz 10-core Intel Xeon W processor, Turbo Boost up to 4.5GHz",583.46,600
+"iMac Pro","MQ2Y2B/A","Processor","Alternatives","2.5GHz","2.5GHz 14-core Intel Xeon W processor, Turbo Boost up to 4.3GHz",1166.92,1200
+"iMac Pro","MQ2Y2B/A","Processor","Alternatives","2.3GHz","2.3GHz 18-core Intel Xeon W processor, Turbo Boost up to 4.3GHz",1750.38,1800
+"iMac Pro","MQ2Y2B/A","Memory","Default Value","32GB","32GB 2666MHz DDR4 ECC memory",0,0
+"iMac Pro","MQ2Y2B/A","Memory","Alternatives","64GB","64GB 2666MHz DDR4 ECC memory",291.73,300
+"iMac Pro","MQ2Y2B/A","Memory","Alternatives","128GB","128GB 2666MHz DDR4 ECC memory",1458.65,1500
+"iMac Pro","MQ2Y2B/A","Memory","Alternatives","256GB","256GB 2666MHz DDR4 ECC memory",3792.48,3900
+"iMac Pro","MQ2Y2B/A","HDD","Default Value","1TB SSD","1TB SSD",0,0
+"iMac Pro","MQ2Y2B/A","HDD","Alternatives","2TB SSD","2TB SSD",291.73,300
+"iMac Pro","MQ2Y2B/A","HDD","Alternatives","4TB SSD","4TB SSD",729.82,900
+"iMac Pro","MQ2Y2B/A","Graphics","Default Value","RadeonPro580","Radeon Pro Vega 56 with 8GB of HBM2 memory",0,0
+"iMac Pro","MQ2Y2B/A","Graphics","Alternatives","RadeonPro580","Radeon Pro Vega 64 with 16GB of HBM2 memory",401,412.5
+"iMac Pro","MQ2Y2B/A","Graphics","Alternatives","RadeonPro64X","Radeon Pro Vega 64X with 16GB of HBM2 memory",510.28,525
+"iMac Pro","MQ2Y2B/A","Mouse and Trackpad","Default Value","MagicMouse2","Magic Mouse 2 - Space Grey",0,0
+"iMac Pro","MQ2Y2B/A","Mouse and Trackpad","Alternatives","MagicTrackpad","Magic Trackpad 2 - Space Grey",40.1,41.67
+"iMac Pro","MQ2Y2B/A","Mouse and Trackpad","Alternatives","Mouse Track2","Magic Mouse 2 + Magic Trackpad 2 - Space Grey",120.3,124.17
+"iMac Pro","MQ2Y2B/A","Keyboard Options","Default Value","WUK","Apple Magic Keyboard with numeric keypad (British) / User's Guide (English) - Space Grey",0,0
+"iMac Pro","MQ2Y2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"iMac Pro","MQ2Y2B/A","Colour","Default Value","Space Grey","Space Grey",0,0
+"Mac mini","MRTT2B/A","Processor","Default Value","3.0Ghz","3.0GHz 6‑core 8th‑generation Intel Core i5 (Turbo Boost up to 4.1GHz)",0,0
+"Mac mini","MRTT2B/A","Processor","Alternatives","3.2GHz","3.2GHz 6‑core 8th‑generation Intel Core i7 (Turbo Boost up to 4.6GHz)",121.3,125
+"Mac mini","MRTT2B/A","Memory","Default Value","8GB","8GB 2666MHz DDR4 SDRAM",0,0
+"Mac mini","MRTT2B/A","Memory","Alternatives","16GB","16GB 2666MHz DDR4 SDRAM",146.37,150
+"Mac mini","MRTT2B/A","Memory","Alternatives","32GB","32GB 2666MHz DDR4 SDRAM",438.1,450
+"Mac mini","MRTT2B/A","Memory","Alternatives","64GB","64GB 2666MHz DDR4 SDRAM ",729.82,750
+"Mac mini","MRTT2B/A","HDD","Default Value","256GBSSD","256GB SSD/Flash",0,0
+"Mac mini","MRTT2B/A","HDD","Alternatives","512GBSSD","512GB SSD/Flash",146.37,150
+"Mac mini","MRTT2B/A","HDD","Alternatives","1TBSSD","1TB SSD/Flash",291.73,300
+"Mac mini","MRTT2B/A","HDD","Alternatives","2TBSSD","2TB SSD/Flash",583.46,600
+"Mac mini","MRTT2B/A","Ethernet","Default Value","Gigabit","Gigabit Ethernet (10/100/1000BASE-T Gigabit Ethernet using RJ-45 connector)",0,0
+"Mac mini","MRTT2B/A","Ethernet","Alternatives","10 Gigabit","10 Gigabit Ethernet (Nbase-T Ethernet with support for 1Gb, 2.5Gb, 5Gb and 10Gb Ethernet using RJ‑45 connector)",73.18,75
+"Mac mini","MRTT2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"Mac mini","MRTT2B/A","Keyboard Options","Default Value","None","Keyboard is not included and must be purchased separately",0,0
+"Mac mini","MRTT2B/A","Mouse and Trackpad","Default Value","None","Mouse is not included and must be purchased separately",0,0
+"Mac mini","MRTT2B/A","Graphics","Default Value","UHD630","Intel UHD Graphics 630",0,0
+"Mac mini","MRTT2B/A","Colour","Default Value","Space Grey","Space Grey",0,0
+"Mac mini","MRTR2B/A","Processor","Default Value","3.6GHz","3.6GHz quad‑core 8th‑generation Intel Core i3",0,0
+"Mac mini","MRTR2B/A","Processor","Alternatives","3.2GHz","3.2GHz 6‑core 8th‑generation Intel Core i7 (Turbo Boost up to 4.6GHz)",218.55,225
+"Mac mini","MRTR2B/A","Memory","Default Value","8GB","8GB 2666MHz DDR4 SDRAM",0,0
+"Mac mini","MRTR2B/A","Memory","Alternatives","16GB","16GB 2666MHz DDR4 SDRAM",146.37,150
+"Mac mini","MRTR2B/A","Memory","Alternatives","32GB","32GB 2666MHz DDR4 SDRAM",438.1,450
+"Mac mini","MRTR2B/A","Memory","Alternatives","64GB","64GB 2666MHz DDR4 SDRAM ",729.82,750
+"Mac mini","MRTR2B/A","HDD","Default Value","128GBSSD","128GB SSD",0,0
+"Mac mini","MRTR2B/A","HDD","Alternatives","256GBSSD","256GB SSD/Flash",146.37,150
+"Mac mini","MRTR2B/A","HDD","Alternatives","512GBSSD","512GB SSD/Flash",291.73,300
+"Mac mini","MRTR2B/A","HDD","Alternatives","1TBSSD","1TB SSD/Flash",438.1,450
+"Mac mini","MRTR2B/A","HDD","Alternatives","2TBSSD","2TB SSD/Flash",729.82,750
+"Mac mini","MRTR2B/A","Ethernet","Default Value","Gigabit","Gigabit Ethernet (10/100/1000BASE-T Gigabit Ethernet using RJ-45 connector)",0,0
+"Mac mini","MRTR2B/A","Ethernet","Alternatives","10 Gigabit","10 Gigabit Ethernet (Nbase-T Ethernet with support for 1Gb, 2.5Gb, 5Gb and 10Gb Ethernet using RJ‑45 connector)",73.18,75
+"Mac mini","MRTR2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"Mac mini","MRTR2B/A","Keyboard Options","Default Value","None","Keyboard is not included and must be purchased separately",0,0
+"Mac mini","MRTR2B/A","Mouse and Trackpad","Default Value","None","Mouse is not included and must be purchased separately",0,0
+"Mac mini","MRTR2B/A","Graphics","Default Value","UHD630","Intel UHD Graphics 630",0,0
+"Mac mini","MRTR2B/A","Colour","Default Value","Space Grey","Space Grey",0,0
+"iMac","MMQA2B/A","Memory","Default Value","8Gb","8GB 2133MHz DDR4",0,0
+"iMac","MMQA2B/A","Memory","Alternatives","16Gb","16GB 2133MHz DDR4",146.37,150
+"iMac","MMQA2B/A","HDD","Default Value","1TBATA","1TB Serial ATA Drive",0,0
+"iMac","MMQA2B/A","HDD","Alternatives","1TBFusion","1TB Fusion Drive",73.18,75
+"iMac","MMQA2B/A","HDD","Alternatives","256SSD","256GB Flash/SSD Storage",146.37,150
+"iMac","MMQA2B/A","Mouse and Trackpad","Default Value","MagicMouse2","Magic Mouse 2",0,0
+"iMac","MMQA2B/A","Mouse and Trackpad","Alternatives","MagicTrackpad","Magic TrackPad 2",40.1,41.67
+"iMac","MMQA2B/A","Mouse and Trackpad","Alternatives","Mouse Track2","Magic Mouse 2 & Magic Trackpad Bundle",104.26,107.5
+"iMac","MMQA2B/A","Keyboard Options","Default Value","WLUKMagic","Apple Magic Keyboard - UK English (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"iMac","MMQA2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"iMac","MMQA2B/A","VESA Mount","Default Value","stdfit","Standard fit",0,0
+"iMac","MMQA2B/A","VESA Mount","Alternatives","Vesa","Select this to include a VESA mount (Stand not included)",32.08,33.33
+"iMac","MMQA2B/A","Processor","Default Value",2.3,"2.3GHz dual-core Intel Core i5 processor",0,0
+"iMac","MMQA2B/A","Graphics","Default Value","G640","Intel Iris Plus Graphics 640",0,0
+"iMac","MMQA2B/A","Colour","Default Value","Silver","Silver",0,0
+"iMac","MRQY2B/A","Processor","Default Value","3.0GHzi5","3.0GHz 6-core 8th-generation Intel Core i5 processor",0,0
+"iMac","MRQY2B/A","Memory","Default Value","8GB","8GB 2666MHz DDR4",0,0
+"iMac","MRQY2B/A","Memory","Alternatives","16GB","16GB 2666MHz DDR4 ",146.37,150
+"iMac","MRQY2B/A","Memory","Alternatives","32GB","32GB 2666MHz DDR4 ",438.1,450
+"iMac","MRQY2B/A","HDD","Default Value","1TBFusion","1TB Fusion Drive",0,0
+"iMac","MRQY2B/A","HDD","Alternatives","2TBFusion","2TB Fusion Drive ",146.37,150
+"iMac","MRQY2B/A","HDD","Alternatives","256GBSSD","256GB SSD ",73.18,75
+"iMac","MRQY2B/A","HDD","Alternatives","512GBSSD","512GB SSD ",218.55,225
+"iMac","MRQY2B/A","HDD","Alternatives","1TBSSD","1TB SSD ",364.91,375
+"iMac","MRQY2B/A","Graphics","Default Value","570x","Radeon Pro 570X with 4GB GDDR5 memory",0,0
+"iMac","MRQY2B/A","Mouse and Trackpad","Default Value","Mmouse","Apple Magic Mouse 2",0,0
+"iMac","MRQY2B/A","Mouse and Trackpad","Alternatives","Mtrack","Apple Magic Trackpad 2",40.1,41.67
+"iMac","MRQY2B/A","Mouse and Trackpad","Alternatives","MmouseMTrack","Apple Magic Mouse 2 + Apple Magic Trackpad 2",104.26,107.5
+"iMac","MRQY2B/A","Keyboard Options","Default Value","KBBritish","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"iMac","MRQY2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"iMac","MRQY2B/A","VESA Mount","Default Value","stdfit","Standard fit",0,0
+"iMac","MRQY2B/A","VESA Mount","Alternatives","Vesa","Select this to include a VESA mount (Stand not included)",32.08,33.33
+"iMac","MRQY2B/A","Colour","Default Value","Silver","Silver",0,0
+"iMac","MRR02B/A","Processor","Default Value","3.1GHzi5","3.1GHz 6-core 8th-generation Intel Core i5 processor",0,0
+"iMac","MRR02B/A","Processor","Alternatives","3.6GHzi9","3.6GHz 8-core 9th-generation Intel Core i9 processor, Turbo Boost up to 5.0GHz",364.91,375
+"iMac","MRR02B/A","Memory","Default Value","8GB","8GB 2666MHz DDR4",0,0
+"iMac","MRR02B/A","Memory","Alternatives","16GB","16GB 2666MHz DDR4 ",146.37,150
+"iMac","MRR02B/A","Memory","Alternatives","32GB","32GB 2666MHz DDR4 ",438.1,450
+"iMac","MRR02B/A","Memory","Alternatives","64GB","64GB 2666MHz DDR4 Memory",729.82,750
+"iMac","MRR02B/A","HDD","Default Value","1TBFusion","1TB Fusion Drive",0,0
+"iMac","MRR02B/A","HDD","Alternatives","2TBFusion","2TB Fusion Drive",146.37,150
+"iMac","MRR02B/A","HDD","Alternatives","3TBFusion","3TB Fusion Drive",218.55,225
+"iMac","MRR02B/A","HDD","Alternatives","256GBSSD","256GB SSD",73.18,75
+"iMac","MRR02B/A","HDD","Alternatives","512GBSSD","512GB SSD",218.55,225
+"iMac","MRR02B/A","HDD","Alternatives","1TBGBSSD","1TB SSD",364.91,375
+"iMac","MRR02B/A","Graphics","Default Value","575x","Radeon Pro 575X with 4GB GDDR5 memory",0,0
+"iMac","MRR02B/A","Mouse and Trackpad","Default Value","Mmouse","Apple Magic Mouse 2",0,0
+"iMac","MRR02B/A","Mouse and Trackpad","Alternatives","Mtrack","Apple Magic Trackpad 2",40.1,41.67
+"iMac","MRR02B/A","Mouse and Trackpad","Alternatives","MmouseMTrack","Apple Magic Mouse 2 + Apple Magic Trackpad 2",104.26,107.5
+"iMac","MRR02B/A","Keyboard Options","Default Value","KBBritish","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"iMac","MRR02B/A","Power","Default Value","UK","UK Power Supply",0,0
+"iMac","MRR02B/A","VESA Mount","Default Value","stdfit","Standard fit",0,0
+"iMac","MRR02B/A","VESA Mount","Alternatives","Vesa","Select this to include a VESA mount (Stand not included)",32.08,33.33
+"iMac","MRR02B/A","Colour","Default Value","Silver","Silver",0,0
+"iMac","MRR12B/A","Processor","Default Value","3.7GHzi5","3.7GHz 6-core 9th-generation Intel Core i5 processor",0,0
+"iMac","MRR12B/A","Processor","Alternatives","3.6GHzi9","3.6GHz 8-core 9th-generation Intel Core i9 processor, Turbo Boost up to 5.0GHz",291.73,300
+"iMac","MRR12B/A","Memory","Default Value","8GB","8GB 2666MHz DDR4",0,0
+"iMac","MRR12B/A","Memory","Alternatives","16GB","16GB 2666MHz DDR4 ",146.37,150
+"iMac","MRR12B/A","Memory","Alternatives","32GB","32GB 2666MHz DDR4 ",438.1,450
+"iMac","MRR12B/A","Memory","Alternatives","64GB","64GB 2666MHz DDR4 Memory",729.82,750
+"iMac","MRR12B/A","HDD","Default Value","2TBFusion","2TB Fusion Drive",0,0
+"iMac","MRR12B/A","HDD","Alternatives","3TBFusion","3TB Fusion Drive",73.18,75
+"iMac","MRR12B/A","HDD","Alternatives","512GBSSD","512GB SSD ",73.18,75
+"iMac","MRR12B/A","HDD","Alternatives","1TBSSD","1TB SSD ",218.55,225
+"iMac","MRR12B/A","HDD","Alternatives","2TBSSD","2TB SSD ",510.28,525
+"iMac","MRR12B/A","Graphics","Default Value","580x","Radeon Pro 580X with 8GB GDDR5 memory",0,0
+"iMac","MRR12B/A","Graphics","Alternatives","Pro48","Radeon Pro Vega 48 with 8GB HBM2 memory",327.82,337.5
+"iMac","MRR12B/A","Mouse and Trackpad","Default Value","Mmouse","Apple Magic Mouse 2",0,0
+"iMac","MRR12B/A","Mouse and Trackpad","Alternatives","Mtrack","Apple Magic Trackpad 2",40.1,41.67
+"iMac","MRR12B/A","Mouse and Trackpad","Alternatives","MmouseMTrack","Apple Magic Mouse 2 + Apple Magic Trackpad 2",104.26,107.5
+"iMac","MRR12B/A","Keyboard Options","Default Value","KBBritish","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"iMac","MRR12B/A","Power","Default Value","UK","UK Power Supply",0,0
+"iMac","MRR12B/A","VESA Mount","Default Value","stdfit","Standard fit",0,0
+"iMac","MRR12B/A","VESA Mount","Alternatives","Vesa","Select this to include a VESA mount (Stand not included)",32.08,33.33
+"iMac","MRR12B/A","Colour","Default Value","Silver","Silver",0,0
+"iMac","MRT42B/A","Processor","Default Value","3.0GHzi5","3.0GHz 6-core 8th-generation Intel Core i5 processor",0,0
+"iMac","MRT42B/A","Processor","Alternatives","3.2GHzi7","3.2GHz 6-core 8th-generation Intel Core i7 processor, Turbo Boost up to 4.6GHz",146.37,150
+"iMac","MRT42B/A","Memory","Default Value","8GB","8GB 2666MHz DDR4",0,0
+"iMac","MRT42B/A","Memory","Alternatives","16GB","16GB 2666MHz DDR4 ",146.37,150
+"iMac","MRT42B/A","Memory","Alternatives","32GB","32GB 2666MHz DDR4 ",438.1,450
+"iMac","MRT42B/A","HDD","Default Value","1TBFusion","1TB Fusion Drive",0,0
+"iMac","MRT42B/A","HDD","Alternatives","256GBSSD","256GB SSD ",73.18,75
+"iMac","MRT42B/A","HDD","Alternatives","512GBSSD","512GB SSD ",218.55,225
+"iMac","MRT42B/A","HDD","Alternatives","1TBSSD","1TB SSD ",364.91,375
+"iMac","MRT42B/A","Graphics","Default Value","560x","Radeon Pro 560X with 4GB GDDR5 memory",0,0
+"iMac","MRT42B/A","Graphics","Alternatives","Pro20","Radeon Pro Vega 20 with 4GB HBM2 memory",255.64,262.5
+"iMac","MRT42B/A","Mouse and Trackpad","Default Value","Mmouse","Apple Magic Mouse 2",0,0
+"iMac","MRT42B/A","Mouse and Trackpad","Alternatives","Mtrack","Apple Magic Trackpad 2",40.1,41.67
+"iMac","MRT42B/A","Mouse and Trackpad","Alternatives","MmouseMTrack","Apple Magic Mouse 2 + Apple Magic Trackpad 2",104.26,107.5
+"iMac","MRT42B/A","Keyboard Options","Default Value","KBBritish","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"iMac","MRT42B/A","Power","Default Value","UK","UK Power Supply",0,0
+"iMac","MRT42B/A","VESA Mount","Default Value","stdfit","Standard fit",0,0
+"iMac","MRT42B/A","VESA Mount","Alternatives","Vesa","Select this to include a VESA mount (Stand not included)",32.08,33.33
+"iMac","MRT42B/A","Colour","Default Value","Silver","Silver",0,0
+"iMac","MRT32B/A","Processor","Default Value","3.6GHzi3","3.6GHz quad-core 8th-generation Intel Core i3 processor",0,0
+"iMac","MRT32B/A","Processor","Alternatives","3.2GHzi7","3.2GHz 6-core 8th-generation Intel Core i7 processor, Turbo Boost up to 4.6GHz",218.55,225
+"iMac","MRT32B/A","Memory","Default Value","8GB","8GB 2666MHz DDR4",0,0
+"iMac","MRT32B/A","Memory","Alternatives","16GB","16GB 2666MHz DDR4 ",146.37,150
+"iMac","MRT32B/A","Memory","Alternatives","32GB","32GB 2666MHz DDR4 ",438.1,450
+"iMac","MRT32B/A","HDD","Default Value","1TATA","1TB Serial ATA Drive ",0,0
+"iMac","MRT32B/A","HDD","Alternatives","1TBFusion","1TB Fusion Drive Storage",73.18,75
+"iMac","MRT32B/A","HDD","Alternatives","256GBSSD","256GB SSD Storage",146.37,150
+"iMac","MRT32B/A","HDD","Alternatives","512GBSSD","512GB SSD storage",291.73,300
+"iMac","MRT32B/A","HDD","Alternatives","1TBSSD","1TB SSD storage",438.1,450
+"iMac","MRT32B/A","Graphics","Default Value","555x","Radeon Pro 555X with 2GB video memory",0,0
+"iMac","MRT32B/A","Mouse and Trackpad","Default Value","Mmouse","Apple Magic Mouse 2",0,0
+"iMac","MRT32B/A","Mouse and Trackpad","Alternatives","Mtrack","Apple Magic Trackpad 2",40.1,41.67
+"iMac","MRT32B/A","Mouse and Trackpad","Alternatives","MmouseMTrack","Apple Magic Mouse 2 + Apple Magic Trackpad 2",104.26,107.5
+"iMac","MRT32B/A","Keyboard Options","Default Value","KBBritish","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"iMac","MRT32B/A","Power","Default Value","UK","UK Power Supply",0,0
+"iMac","MRT32B/A","VESA Mount","Default Value","stdfit","Standard fit",0,0
+"iMac","MRT32B/A","VESA Mount","Alternatives","Vesa","Select this to include a VESA mount (Stand not included)",32.08,33.33
+"iMac","MRT32B/A","Colour","Default Value","Silver","Silver",0,0
+"MacBook Pro 13 2019","MV962B/A","Processor","Default Value","2.4Ghz","2.4GHz quad‑core 8th‑generation Intel Core i5 processor, Turbo Boost up to 4.1GHz",0,0
+"MacBook Pro 13 2019","MV962B/A","Processor","Alternatives","2.8GHz","2.8GHz quad‑core 8th‑generation Intel Core i7 processor, Turbo Boost up to 4.7GHz",218.55,225
+"MacBook Pro 13 2019","MV962B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 memory",0,0
+"MacBook Pro 13 2019","MV962B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 memory",146.37,150
+"MacBook Pro 13 2019","MV962B/A","HDD","Default Value","256GBSSD","256GB SSD storage",0,0
+"MacBook Pro 13 2019","MV962B/A","HDD","Alternatives","512GBSSD","512GB PCIe-based SSD",162.41,166.67
+"MacBook Pro 13 2019","MV962B/A","HDD","Alternatives","1TBSSD","1TB PCIe-based SSD",323.81,333.33
+"MacBook Pro 13 2019","MV962B/A","HDD","Alternatives","2TBSSD","2TB PCIe-based SSD",648.62,666.67
+"MacBook Pro 13 2019","MV962B/A","Graphics","Default Value","G655","Intel Iris Plus Graphics 655",0,0
+"MacBook Pro 13 2019","MV962B/A","Keyboard Options","Default Value","KBUK","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 13 2019","MV962B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 13 2019","MV962B/A","Colour","Default Value","Space Grey","Space Grey",0,0
+"MacBook Pro 13 2019","MV972B/A","Processor","Default Value","2.4Ghz","2.4GHz quad‑core 8th‑generation Intel Core i5 processor, Turbo Boost up to 4.1GHz",0,0
+"MacBook Pro 13 2019","MV972B/A","Processor","Alternatives","2.8GHz","2.8GHz quad‑core 8th‑generation Intel Core i7 processor, Turbo Boost up to 4.7GHz",218.55,225
+"MacBook Pro 13 2019","MV972B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 memory",0,0
+"MacBook Pro 13 2019","MV972B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 memory",146.37,150
+"MacBook Pro 13 2019","MV972B/A","HDD","Default Value","512GBSSD","512GB PCIe-based SSD",0,0
+"MacBook Pro 13 2019","MV972B/A","HDD","Alternatives","1TBSSD","1TB PCIe-based SSD",162.41,166.67
+"MacBook Pro 13 2019","MV972B/A","HDD","Alternatives","2TBSSD","2TB PCIe-based SSD",486.22,500
+"MacBook Pro 13 2019","MV972B/A","Graphics","Default Value","G655","Intel Iris Plus Graphics 655",0,0
+"MacBook Pro 13 2019","MV972B/A","Keyboard Options","Default Value","KBUK","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 13 2019","MV972B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 13 2019","MV972B/A","Colour","Default Value","Space Grey","Space Grey",0,0
+"MacBook Pro 13 2019","MV992B/A","Processor","Default Value","2.4Ghz","2.4GHz quad‑core 8th‑generation Intel Core i5 processor, Turbo Boost up to 4.1GHz",0,0
+"MacBook Pro 13 2019","MV992B/A","Processor","Alternatives","2.8GHz","2.8GHz quad‑core 8th‑generation Intel Core i7 processor, Turbo Boost up to 4.7GHz",218.55,225
+"MacBook Pro 13 2019","MV992B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 memory",0,0
+"MacBook Pro 13 2019","MV992B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 memory",146.37,150
+"MacBook Pro 13 2019","MV992B/A","HDD","Default Value","256GBSSD","256GB SSD storage",0,0
+"MacBook Pro 13 2019","MV992B/A","HDD","Alternatives","512GBSSD","512GB PCIe-based SSD",162.41,166.67
+"MacBook Pro 13 2019","MV992B/A","HDD","Alternatives","1TBSSD","1TB PCIe-based SSD",323.81,333.33
+"MacBook Pro 13 2019","MV992B/A","HDD","Alternatives","2TBSSD","2TB PCIe-based SSD",648.62,666.67
+"MacBook Pro 13 2019","MV992B/A","Graphics","Default Value","G655","Intel Iris Plus Graphics 655",0,0
+"MacBook Pro 13 2019","MV992B/A","Keyboard Options","Default Value","KBUK","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 13 2019","MV992B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 13 2019","MV992B/A","Colour","Default Value","Silver","Silver",0,0
+"MacBook Pro 13 2019","MV9A2B/A","Processor","Default Value","2.4Ghz","2.4GHz quad‑core 8th‑generation Intel Core i5 processor, Turbo Boost up to 4.1GHz",0,0
+"MacBook Pro 13 2019","MV9A2B/A","Processor","Alternatives","2.8GHz","2.8GHz quad‑core 8th‑generation Intel Core i7 processor, Turbo Boost up to 4.7GHz",218.55,225
+"MacBook Pro 13 2019","MV9A2B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 memory",0,0
+"MacBook Pro 13 2019","MV9A2B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 memory",146.37,150
+"MacBook Pro 13 2019","MV9A2B/A","HDD","Default Value","512GBSSD","512GB PCIe-based SSD",0,0
+"MacBook Pro 13 2019","MV9A2B/A","HDD","Alternatives","1TBSSD","1TB PCIe-based SSD",162.41,166.67
+"MacBook Pro 13 2019","MV9A2B/A","HDD","Alternatives","2TBSSD","2TB PCIe-based SSD",486.22,500
+"MacBook Pro 13 2019","MV9A2B/A","Graphics","Default Value","G655","Intel Iris Plus Graphics 655",0,0
+"MacBook Pro 13 2019","MV9A2B/A","Keyboard Options","Default Value","KBUK","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 13 2019","MV9A2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 13 2019","MV9A2B/A","Colour","Default Value","Silver","Silver",0,0
+"MacBook Pro 13 2019","MUHN2B/A","Processor","Default Value","1.4GHz","1.4GHz quad-core 8th‑generation Intel Core i5 processor, Turbo Boost up to 3.9GHz",0,0
+"MacBook Pro 13 2019","MUHN2B/A","Processor","Alternatives","1.7GHz","1.7GHz quad-core 8th‑generation Intel Core i7 processor, Turbo Boost up to 4.5GHz",218.55,225
+"MacBook Pro 13 2019","MUHN2B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 SDRAM",0,
+"MacBook Pro 13 2019","MUHN2B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 SDRAM",146.37,150
+"MacBook Pro 13 2019","MUHN2B/A","HDD","Default Value","128GB","128GB PCIe-based Flash/SSD",0,0
+"MacBook Pro 13 2019","MUHN2B/A","HDD","Alternatives","256GB","256GB PCIe-based Flash/SSD",162.41,166.67
+"MacBook Pro 13 2019","MUHN2B/A","HDD","Alternatives","512GB","512GB PCIe-based Flash/SSD",323.81,333.33
+"MacBook Pro 13 2019","MUHN2B/A","HDD","Alternatives","1TB","1TB PCIe-based Flash/SSD",486.22,500
+"MacBook Pro 13 2019","MUHN2B/A","HDD","Alternatives","2TB","2TB PCIe-based Flash/SSD",810.03,833.33
+"MacBook Pro 13 2019","MUHN2B/A","Graphics","Default Value","Iris645","Intel Iris Plus Graphics 645",0,0
+"MacBook Pro 13 2019","MUHN2B/A","Keyboard Options","Default Value",0,"UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 13 2019","MUHN2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 13 2019","MUHN2B/A","Colour","Default Value","Space Grey","Space Grey",0,0
+"MacBook Pro 13 2019","MUHN2B/A","Touch Bar","Default Value","Touch Bar","YES",0,0
+"MacBook Pro 13 2019","MUHQ2B/A","Processor","Default Value","1.4GHz","1.4GHz quad-core 8th‑generation Intel Core i5 processor, Turbo Boost up to 3.9GHz",0,0
+"MacBook Pro 13 2019","MUHQ2B/A","Processor","Alternatives","1.7GHz","1.7GHz quad-core 8th‑generation Intel Core i7 processor, Turbo Boost up to 4.5GHz",218.55,225
+"MacBook Pro 13 2019","MUHQ2B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 SDRAM",0,
+"MacBook Pro 13 2019","MUHQ2B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 SDRAM",146.37,150
+"MacBook Pro 13 2019","MUHQ2B/A","HDD","Default Value","128GB","128GB PCIe-based Flash/SSD",0,0
+"MacBook Pro 13 2019","MUHQ2B/A","HDD","Alternatives","256GB","256GB PCIe-based Flash/SSD",162.41,166.67
+"MacBook Pro 13 2019","MUHQ2B/A","HDD","Alternatives","512GB","512GB PCIe-based Flash/SSD",323.81,333.33
+"MacBook Pro 13 2019","MUHQ2B/A","HDD","Alternatives","1TB","1TB PCIe-based Flash/SSD",486.22,500
+"MacBook Pro 13 2019","MUHQ2B/A","HDD","Alternatives","2TB","2TB PCIe-based Flash/SSD",810.03,833.33
+"MacBook Pro 13 2019","MUHQ2B/A","Graphics","Default Value","Iris645","Intel Iris Plus Graphics 645",0,0
+"MacBook Pro 13 2019","MUHQ2B/A","Keyboard Options","Default Value",0,"UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 13 2019","MUHQ2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 13 2019","MUHQ2B/A","Colour","Default Value","Silver","Silver",0,0
+"MacBook Pro 13 2019","MUHQ2B/A","Touch Bar","Default Value","Touch Bar","YES",0,0
+"MacBook Pro 13 2019","MUHP2B/A","Processor","Default Value","1.4GHz","1.4GHz quad-core 8th‑generation Intel Core i5 processor, Turbo Boost up to 3.9GHz",0,0
+"MacBook Pro 13 2019","MUHP2B/A","Processor","Alternatives","1.7GHz","1.7GHz quad-core 8th‑generation Intel Core i7 processor, Turbo Boost up to 4.5GHz",218.55,225
+"MacBook Pro 13 2019","MUHP2B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 SDRAM",0,0
+"MacBook Pro 13 2019","MUHP2B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 SDRAM",146.37,150
+"MacBook Pro 13 2019","MUHP2B/A","HDD","Default Value","256GB","256GB PCIe-based Flash/SSD",0,0
+"MacBook Pro 13 2019","MUHP2B/A","HDD","Alternatives","512GB","512GB PCIe-based Flash/SSD",162.41,166.67
+"MacBook Pro 13 2019","MUHP2B/A","HDD","Alternatives","1TB","1TB PCIe-based Flash/SSD",323.81,333.33
+"MacBook Pro 13 2019","MUHP2B/A","HDD","Alternatives","2TB","2TB PCIe-based Flash/SSD",648.62,666.67
+"MacBook Pro 13 2019","MUHP2B/A","Graphics","Default Value","Iris645","Intel Iris Plus Graphics 645",0,0
+"MacBook Pro 13 2019","MUHP2B/A","Keyboard Options","Default Value",0,"UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 13 2019","MUHP2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 13 2019","MUHP2B/A","Colour","Default Value","Space Grey","Space Grey",0,0
+"MacBook Pro 13 2019","MUHP2B/A","Touch Bar","Default Value","Touch Bar","YES",0,0
+"MacBook Pro 13 2019","MUHR2B/A","Processor","Default Value","1.4GHz","1.4GHz quad-core 8th‑generation Intel Core i5 processor, Turbo Boost up to 3.9GHz",0,0
+"MacBook Pro 13 2019","MUHR2B/A","Processor","Alternatives","1.7GHz","1.7GHz quad-core 8th‑generation Intel Core i7 processor, Turbo Boost up to 4.5GHz",218.55,225
+"MacBook Pro 13 2019","MUHR2B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 SDRAM",0,0
+"MacBook Pro 13 2019","MUHR2B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 SDRAM",146.37,150
+"MacBook Pro 13 2019","MUHR2B/A","HDD","Default Value","256GB","256GB PCIe-based Flash/SSD",0,0
+"MacBook Pro 13 2019","MUHR2B/A","HDD","Alternatives","512GB","512GB PCIe-based Flash/SSD",162.41,166.67
+"MacBook Pro 13 2019","MUHR2B/A","HDD","Alternatives","1TB","1TB PCIe-based Flash/SSD",323.81,333.33
+"MacBook Pro 13 2019","MUHR2B/A","HDD","Alternatives","2TB","2TB PCIe-based Flash/SSD",648.62,666.67
+"MacBook Pro 13 2019","MUHR2B/A","Graphics","Default Value","Iris645","Intel Iris Plus Graphics 645",0,0
+"MacBook Pro 13 2019","MUHR2B/A","Keyboard Options","Default Value",0,"UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 13 2019","MUHR2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 13 2019","MUHR2B/A","Colour","Default Value","Silver","Silver",0,0
+"MacBook Pro 13 2019","MUHR2B/A","Touch Bar","Default Value","Touch Bar","YES",0,0
+"MacBook Pro 16 2019","MVVJ2B/A","Processor","Default Value","2.6GHz","2.6GHz 6-core 9th-generation Intel Core i7 processor, Turbo Boost up to 4.5GHz",0,0
+"MacBook Pro 16 2019","MVVJ2B/A","Processor","Alternatives","2.4GHz","2.4GHz 8-core 9th-generation Intel Core i9 processor, Turbo Boost up to 5.0GHz",245.61,258.33
+"MacBook Pro 16 2019","MVVJ2B/A","Graphics","Default Value","AMD5399M","AMD Radeon Pro 5300M with 4GB of GDDR6 memory",0,0
+"MacBook Pro 16 2019","MVVJ2B/A","Graphics","Alternatives","AMD5500M4GB","AMD Radeon Pro 5500M with 4GB of GDDR6 memory",71.18,75
+"MacBook Pro 16 2019","MVVJ2B/A","Graphics","Alternatives","AMD5500M8GB","AMD Radeon Pro 5500M with 8GB of GDDR6 memory",143.36,150
+"MacBook Pro 16 2019","MVVJ2B/A","Memory","Default Value","16GB","16GB 2666MHz DDR4 memory",0,0
+"MacBook Pro 16 2019","MVVJ2B/A","Memory","Alternatives","32GB","32GB 2666MHz DDR4 memory",285.71,300
+"MacBook Pro 16 2019","MVVJ2B/A","Memory","Alternatives","64GB","64GB 2666MHz DDR4 memory",571.43,600
+"MacBook Pro 16 2019","MVVJ2B/A","HDD","Default Value","512GBSSD","512GB SSD storage",0,0
+"MacBook Pro 16 2019","MVVJ2B/A","HDD","Alternatives","1TBSSD","1TB SSD storage",143.36,150
+"MacBook Pro 16 2019","MVVJ2B/A","HDD","Alternatives","2TBSSD","2TB SSD storage",429.07,450
+"MacBook Pro 16 2019","MVVJ2B/A","HDD","Alternatives","4TBSSD","4TB SSD storage",857.14,900
+"MacBook Pro 16 2019","MVVJ2B/A","HDD","Alternatives","8TBSSD","8TB SSD storage",1714.29,1800
+"MacBook Pro 16 2019","MVVJ2B/A","Keyboard Options","Default Value","KBUK","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 16 2019","MVVJ2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 16 2019","MVVJ2B/A","Colour","Default Value","Space Grey","Space Grey",0,0
+"MacBook Pro 16 2019","MVVL2B/A","Processor","Default Value","2.6GHz","2.6GHz 6-core 9th-generation Intel Core i7 processor, Turbo Boost up to 4.5GHz",0,0
+"MacBook Pro 16 2019","MVVL2B/A","Processor","Alternatives","2.4GHz","2.4GHz 8-core 9th-generation Intel Core i9 processor, Turbo Boost up to 5.0GHz",245.61,258.33
+"MacBook Pro 16 2019","MVVL2B/A","Graphics","Default Value","AMD5399M","AMD Radeon Pro 5300M with 4GB of GDDR6 memory",0,0
+"MacBook Pro 16 2019","MVVL2B/A","Graphics","Alternatives","AMD5500M4GB","AMD Radeon Pro 5500M with 4GB of GDDR6 memory",71.18,75
+"MacBook Pro 16 2019","MVVL2B/A","Graphics","Alternatives","AMD5500M8GB","AMD Radeon Pro 5500M with 8GB of GDDR6 memory",143.36,150
+"MacBook Pro 16 2019","MVVL2B/A","Memory","Default Value","16GB","16GB 2666MHz DDR4 memory",0,0
+"MacBook Pro 16 2019","MVVL2B/A","Memory","Alternatives","32GB","32GB 2666MHz DDR4 memory",285.71,300
+"MacBook Pro 16 2019","MVVL2B/A","Memory","Alternatives","64GB","64GB 2666MHz DDR4 memory",571.43,600
+"MacBook Pro 16 2019","MVVL2B/A","HDD","Default Value","512GBSSD","512GB SSD storage",0,0
+"MacBook Pro 16 2019","MVVL2B/A","HDD","Alternatives","1TBSSD","1TB SSD storage",143.36,150
+"MacBook Pro 16 2019","MVVL2B/A","HDD","Alternatives","2TBSSD","2TB SSD storage",429.07,450
+"MacBook Pro 16 2019","MVVL2B/A","HDD","Alternatives","4TBSSD","4TB SSD storage",857.14,900
+"MacBook Pro 16 2019","MVVL2B/A","HDD","Alternatives","8TBSSD","8TB SSD storage",1714.29,1800
+"MacBook Pro 16 2019","MVVL2B/A","Keyboard Options","Default Value","KBUK","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 16 2019","MVVL2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 16 2019","MVVL2B/A","Colour","Default Value","Silver","Silver",0,0
+"MacBook Pro 16 2019","MVVK2B/A","Processor","Default Value","2.3GHz","2.3GHz 8-core 9th-generation Intel Core i9 processor, Turbo Boost up to 4.8GHz",0,0
+"MacBook Pro 16 2019","MVVK2B/A","Processor","Alternatives","2.4GHz","2.4GHz 8-core 9th-generation Intel Core i9 processor, Turbo Boost up to 5.0GHz",143.36,150
+"MacBook Pro 16 2019","MVVK2B/A","Graphics","Default Value","AMD5500M4GB","AMD Radeon Pro 5500M with 4GB of GDDR6 memory",0,0
+"MacBook Pro 16 2019","MVVK2B/A","Graphics","Alternatives","AMD5500M8GB","AMD Radeon Pro 5500M with 8GB of GDDR6 memory",71.18,75
+"MacBook Pro 16 2019","MVVK2B/A","Memory","Default Value","16GB","16GB 2666MHz DDR4 memory",0,0
+"MacBook Pro 16 2019","MVVK2B/A","Memory","Alternatives","32GB","32GB 2666MHz DDR4 memory",285.71,300
+"MacBook Pro 16 2019","MVVK2B/A","Memory","Alternatives","64GB","64GB 2666MHz DDR4 memory",571.43,600
+"MacBook Pro 16 2019","MVVK2B/A","HDD","Default Value","1TBSSD","1TB SSD storage",0,0
+"MacBook Pro 16 2019","MVVK2B/A","HDD","Alternatives","2TBSSD","2TB SSD storage",285.71,300
+"MacBook Pro 16 2019","MVVK2B/A","HDD","Alternatives","4TBSSD","4TB SSD storage",714.79,750
+"MacBook Pro 16 2019","MVVK2B/A","HDD","Alternatives","8TBSSD","8TB SSD storage",1571.93,1650
+"MacBook Pro 16 2019","MVVK2B/A","Keyboard Options","Default Value","KBUK","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 16 2019","MVVK2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 16 2019","MVVK2B/A","Colour","Default Value","Space Grey","Space Grey",0,0
+"MacBook Pro 16 2019","MVVM2B/A","Processor","Default Value","2.3GHz","2.3GHz 8-core 9th-generation Intel Core i9 processor, Turbo Boost up to 4.8GHz",0,0
+"MacBook Pro 16 2019","MVVM2B/A","Processor","Alternatives","2.4GHz","2.4GHz 8-core 9th-generation Intel Core i9 processor, Turbo Boost up to 5.0GHz",143.36,150
+"MacBook Pro 16 2019","MVVM2B/A","Graphics","Default Value","AMD5500M4GB","AMD Radeon Pro 5500M with 4GB of GDDR6 memory",0,0
+"MacBook Pro 16 2019","MVVM2B/A","Graphics","Alternatives","AMD5500M8GB","AMD Radeon Pro 5500M with 8GB of GDDR6 memory",71.18,75
+"MacBook Pro 16 2019","MVVM2B/A","Memory","Default Value","16GB","16GB 2666MHz DDR4 memory",0,0
+"MacBook Pro 16 2019","MVVM2B/A","Memory","Alternatives","32GB","32GB 2666MHz DDR4 memory",285.71,300
+"MacBook Pro 16 2019","MVVM2B/A","Memory","Alternatives","64GB","64GB 2666MHz DDR4 memory",571.43,600
+"MacBook Pro 16 2019","MVVM2B/A","HDD","Default Value","1TBSSD","1TB SSD storage",0,0
+"MacBook Pro 16 2019","MVVM2B/A","HDD","Alternatives","2TBSSD","2TB SSD storage",285.71,300
+"MacBook Pro 16 2019","MVVM2B/A","HDD","Alternatives","4TBSSD","4TB SSD storage",714.79,750
+"MacBook Pro 16 2019","MVVM2B/A","HDD","Alternatives","8TBSSD","8TB SSD storage",1571.93,1650
+"MacBook Pro 16 2019","MVVM2B/A","Keyboard Options","Default Value","KBUK","UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Pro 16 2019","MVVM2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Pro 16 2019","MVVM2B/A","Colour","Default Value","Silver","Silver",0,0
+"MacBook Air","MVFH2B/A","Processor","Default Value","1.6GHz","1.6GHz dual-core 8th-generation Intel Core i5 processor, Turbo Boost up to 3.6GHz",0,0
+"MacBook Air","MVFH2B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 memory",0,0
+"MacBook Air","MVFH2B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 memory",146.37,150
+"MacBook Air","MVFH2B/A","HDD","Default Value","128GB","128GB PCIe-based SSD/Flash",0,0
+"MacBook Air","MVFH2B/A","HDD","Alternatives","256GB","256GB PCIe-based SSD",162.41,166.67
+"MacBook Air","MVFH2B/A","HDD","Alternatives","512GB","512GB PCIe-based SSD",323.81,333.33
+"MacBook Air","MVFH2B/A","HDD","Alternatives","1TB","1TB PCIe-based SSD",486.22,500
+"MacBook Air","MVFH2B/A","Keyboard Options","Default Value",0,"UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Air","MVFH2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Air","MVFH2B/A","Graphics","Default Value","UHD617","Intel UHD Graphics 617",0,0
+"MacBook Air","MVFH2B/A","Colour","Default Value","Space Grey","Space Grey",0,0
+"MacBook Air","MVFH2B/A","Touch","Default Value","ID","TouchID",0,0
+"MacBook Air","MVFH2B/A","Display","Default Value","TT","True Tone",0,0
+"MacBook Air","MVFK2B/A","Processor","Default Value","1.6GHz","1.6GHz dual-core 8th-generation Intel Core i5 processor, Turbo Boost up to 3.6GHz",0,0
+"MacBook Air","MVFK2B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 memory",0,0
+"MacBook Air","MVFK2B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 memory",146.37,150
+"MacBook Air","MVFK2B/A","HDD","Default Value","128GB","128GB PCIe-based SSD/Flash",0,0
+"MacBook Air","MVFK2B/A","HDD","Alternatives","256GB","256GB PCIe-based SSD",162.41,166.67
+"MacBook Air","MVFK2B/A","HDD","Alternatives","512GB","512GB PCIe-based SSD",323.81,333.33
+"MacBook Air","MVFK2B/A","HDD","Alternatives","1TB","1TB PCIe-based SSD",486.22,500
+"MacBook Air","MVFK2B/A","Keyboard Options","Default Value",0,"UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Air","MVFK2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Air","MVFK2B/A","Graphics","Default Value","UHD617","Intel UHD Graphics 617",0,0
+"MacBook Air","MVFK2B/A","Colour","Default Value","Silver","Silver",0,0
+"MacBook Air","MVFK2B/A","Touch","Default Value","ID","TouchID",0,0
+"MacBook Air","MVFK2B/A","Display","Default Value","TT","True Tone",0,0
+"MacBook Air","MVFM2B/A","Processor","Default Value","1.6GHz","1.6GHz dual-core 8th-generation Intel Core i5 processor, Turbo Boost up to 3.6GHz",0,0
+"MacBook Air","MVFM2B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 memory",0,0
+"MacBook Air","MVFM2B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 memory",146.37,150
+"MacBook Air","MVFM2B/A","HDD","Default Value","128GB","128GB PCIe-based SSD/Flash",0,0
+"MacBook Air","MVFM2B/A","HDD","Alternatives","256GB","256GB PCIe-based SSD",162.41,166.67
+"MacBook Air","MVFM2B/A","HDD","Alternatives","512GB","512GB PCIe-based SSD",323.81,333.33
+"MacBook Air","MVFM2B/A","HDD","Alternatives","1TB","1TB PCIe-based SSD",486.22,500
+"MacBook Air","MVFM2B/A","Keyboard Options","Default Value",0,"UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Air","MVFM2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Air","MVFM2B/A","Graphics","Default Value","UHD617","Intel UHD Graphics 617",0,0
+"MacBook Air","MVFM2B/A","Colour","Default Value","Gold","Gold",0,0
+"MacBook Air","MVFM2B/A","Touch","Default Value","ID","TouchID",0,0
+"MacBook Air","MVFM2B/A","Display","Default Value","TT","True Tone",0,0
+"MacBook Air","MVFJ2B/A","Processor","Default Value","1.6GHz","1.6GHz dual-core 8th-generation Intel Core i5 processor, Turbo Boost up to 3.6GHz",0,0
+"MacBook Air","MVFJ2B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 memory",0,0
+"MacBook Air","MVFJ2B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 memory",146.37,150
+"MacBook Air","MVFJ2B/A","HDD","Default Value","256GB","256GB PCIe-based SSD",0,0
+"MacBook Air","MVFJ2B/A","HDD","Alternatives","512GB","512GB PCIe-based SSD",162.41,166.67
+"MacBook Air","MVFJ2B/A","HDD","Alternatives","1TB","1TB PCIe-based SSD",323.81,333.33
+"MacBook Air","MVFJ2B/A","Keyboard Options","Default Value",0,"UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Air","MVFJ2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Air","MVFJ2B/A","Graphics","Default Value","UHD617","Intel UHD Graphics 617",0,0
+"MacBook Air","MVFJ2B/A","Colour","Default Value","Space Grey","Space Grey",0,0
+"MacBook Air","MVFJ2B/A","Touch","Default Value","ID","TouchID",0,0
+"MacBook Air","MVFJ2B/A","Display","Default Value","TT","True Tone",0,0
+"MacBook Air","MVFL2B/A","Processor","Default Value","1.6GHz","1.6GHz dual-core 8th-generation Intel Core i5 processor, Turbo Boost up to 3.6GHz",0,0
+"MacBook Air","MVFL2B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 memory",0,0
+"MacBook Air","MVFL2B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 memory",146.37,150
+"MacBook Air","MVFL2B/A","HDD","Default Value","256GB","256GB PCIe-based SSD",0,0
+"MacBook Air","MVFL2B/A","HDD","Alternatives","512GB","512GB PCIe-based SSD",162.41,166.67
+"MacBook Air","MVFL2B/A","HDD","Alternatives","1TB","1TB PCIe-based SSD",323.81,333.33
+"MacBook Air","MVFL2B/A","Keyboard Options","Default Value",0,"UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Air","MVFL2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Air","MVFL2B/A","Graphics","Default Value","UHD617","Intel UHD Graphics 617",0,0
+"MacBook Air","MVFL2B/A","Colour","Default Value","Silver","Silver",0,0
+"MacBook Air","MVFL2B/A","Touch","Default Value","ID","TouchID",0,0
+"MacBook Air","MVFL2B/A","Display","Default Value","TT","True Tone",0,0
+"MacBook Air","MVFN2B/A","Processor","Default Value","1.6GHz","1.6GHz dual-core 8th-generation Intel Core i5 processor, Turbo Boost up to 3.6GHz",0,0
+"MacBook Air","MVFN2B/A","Memory","Default Value","8GB","8GB 2133MHz LPDDR3 memory",0,0
+"MacBook Air","MVFN2B/A","Memory","Alternatives","16GB","16GB 2133MHz LPDDR3 memory",146.37,150
+"MacBook Air","MVFN2B/A","HDD","Default Value","256GB","256GB PCIe-based SSD",0,0
+"MacBook Air","MVFN2B/A","HDD","Alternatives","512GB","512GB PCIe-based SSD",162.41,166.67
+"MacBook Air","MVFN2B/A","HDD","Alternatives","1TB","1TB PCIe-based SSD",323.81,333.33
+"MacBook Air","MVFN2B/A","Keyboard Options","Default Value",0,"UK English Keyboard (Please note: Power supply must be selected separately for all keyboards if required)",0,0
+"MacBook Air","MVFN2B/A","Power","Default Value","UK","UK Power Supply",0,0
+"MacBook Air","MVFN2B/A","Graphics","Default Value","UHD617","Intel UHD Graphics 617",0,0
+"MacBook Air","MVFN2B/A","Colour","Default Value","Gold","Gold",0,0
+"MacBook Air","MVFN2B/A","Touch","Default Value","ID","TouchID",0,0
+"MacBook Air","MVFN2B/A","Display","Default Value","TT","True Tone",0,0
+"Mac Pro 2019","Z0W3_2000481360_BASE","Processor","Default Value","3.5GHz8c","3.5GHz 8‑core Intel Xeon W processor, Turbo Boost up to 4.0GHz",0,0
+"Mac Pro 2019","Z0W3_2000481360_BASE","Processor","Alternatives","3.3GHz12c","3.3GHz 12‑core Intel Xeon W processor, Turbo Boost up to 4.4GHz",714.79,750
+"Mac Pro 2019","Z0W3_2000481360_BASE","Processor","Alternatives","3.2GHz16c","3.2GHz 16‑core Intel Xeon W processor, Turbo Boost up to 4.4GHz",1428.57,1500
+"Mac Pro 2019","Z0W3_2000481360_BASE","Processor","Alternatives","2.7GHz245c","2.7GHz 24‑core Intel Xeon W processor, Turbo Boost up to 4.4GHz",4285.71,4500
+"Mac Pro 2019","Z0W3_2000481360_BASE","Processor","Alternatives","2.5GHz28c","2.5GHz 28‑core Intel Xeon W processor, Turbo Boost up to 4.4GHz",5000.5,5250
+"Mac Pro 2019","Z0W3_2000481360_BASE","Memory","Default Value","32GB","32GB (4x8GB) of DDR4 ECC memory",0,0
+"Mac Pro 2019","Z0W3_2000481360_BASE","Memory","Alternatives","48GB","48GB (6x8GB) of DDR4 ECC memory",214.54,225
+"Mac Pro 2019","Z0W3_2000481360_BASE","Memory","Alternatives","96GB","96GB (6x16GB) of DDR4 ECC memory",714.79,750
+"Mac Pro 2019","Z0W3_2000481360_BASE","Memory","Alternatives","192GB","192GB (6x32GB) of DDR4 ECC memory",2143.36,2250
+"Mac Pro 2019","Z0W3_2000481360_BASE","Memory","Alternatives","384GB","384GB (6x64GB) of DDR4 ECC memory",4285.71,4500
+"Mac Pro 2019","Z0W3_2000481360_BASE","Memory","Alternatives","768TB12x64","768GB (12x64GB) of DDR4 ECC memory",7142.86,7500
+"Mac Pro 2019","Z0W3_2000481360_BASE","Memory","Alternatives","768GB6x128","768GB (6x128GB) of DDR4 ECC memory",10000,10500
+"Mac Pro 2019","Z0W3_2000481360_BASE","Memory","Alternatives","1.5TB","1.5TB (12x128GB) of DDR4 ECC memory (requires a 24or28-core processor)",17857.64,18750
+"Mac Pro 2019","Z0W3_2000481360_BASE","HDD","Default Value","256GB","256GB SSD storage",0,0
+"Mac Pro 2019","Z0W3_2000481360_BASE","HDD","Alternatives","1TB","1TB SSD storage",285.71,300
+"Mac Pro 2019","Z0W3_2000481360_BASE","HDD","Alternatives","2TB","2TB SSD storage",571.43,600
+"Mac Pro 2019","Z0W3_2000481360_BASE","HDD","Alternatives","4TB","4TB SSD storage",1000.5,1050
+"Mac Pro 2019","Z0W3_2000481360_BASE","HDD","Alternatives","8 TB","8TB SSD storage",1857.64,1950
+"Mac Pro 2019","Z0W3_2000481360_BASE","Graphics","Default Value","580X","Radeon Pro 580X with 8GB of GDDR5 memory",0,0
+"Mac Pro 2019","Z0W3_2000481360_BASE","Graphics","Alternatives","Pro11","Radeon Pro Vega II with 32GB of HBM2 memory",1714.29,1800
+"Mac Pro 2019","Z0W3_2000481360_BASE","Graphics","Alternatives","Pro11 2","Two Radeon Pro Vega II with 32GB of HBM2 memory each",3714.29,3900
+"Mac Pro 2019","Z0W3_2000481360_BASE","Graphics","Alternatives","Pro11Duo","Radeon Pro Vega II Duo with 2x32GB of HBM2 memory",3714.29,3900
+"Mac Pro 2019","Z0W3_2000481360_BASE","Graphics","Alternatives","Pro11Duox2","Two Radeon Pro Vega II Duo with 2x32GB of HBM2 memory each",7714.29,8100
+"Mac Pro 2019","Z0W3_2000481360_BASE","Afterburner","Default Value","AfterburnerNO","None",0,0
+"Mac Pro 2019","Z0W3_2000481360_BASE","Afterburner","Alternatives","Afterburner","Apple Afterburner card",1428.57,1500
+"Mac Pro 2019","Z0W3_2000481360_BASE","Movability","Default Value","Feet","Stainless steel frame with feet",0,0
+"Mac Pro 2019","Z0W3_2000481360_BASE","Movability","Alternatives","Wheels","Stainless steel frame with wheels",285.71,300
+"Mac Pro 2019","Z0W3_2000481360_BASE","Mouse and Trackpad","Default Value","MM","Magic Mouse 2",0,0
+"Mac Pro 2019","Z0W3_2000481360_BASE","Mouse and Trackpad","Alternatives","TP","Magic Trackpad 2",40.1,41.67
+"Mac Pro 2019","Z0W3_2000481360_BASE","Mouse and Trackpad","Alternatives","MMTP","Magic Mouse 2 + Magic Trackpad 2",118.3,124.17
+"Mac Pro 2019","Z0W3_2000481360_BASE","Keyboard Options","Default Value","KBBritish","Apple Magic Keyboard with numeric keypad (British) / User's Guide (English) ***NON-UK Keyboards available on request***",0,0
+"Mac Pro 2019","Z0W3_2000481360_BASE","Power","Default Value","UK","UK Power Supply",0,0
+"Mac Pro 2019","Z0W3_2000481360_BASE","Power","Alternatives","EURO","EU Power Supply",0,0

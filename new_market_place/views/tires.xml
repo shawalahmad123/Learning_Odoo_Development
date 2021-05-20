@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="vehicle_tyre_tree" model="ir.ui.view">
+        <field name="name">vehicle.tyre.tree</field>
+        <field name="model">vehicle.tyre</field>
+        <field name="arch" type="xml">
+            <tree string="Vehicles">
+                <field name="name" />
+                <field name="company" />
+                <field name="notes" />
+                <field name="image" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="vehicle_tyre_form" model="ir.ui.view">
+        <field name="name">vehicle.tyre.form</field>
+        <field name="model">vehicle.tyre</field>
+        <field name="arch" type="xml">
+            <form string="Vehicle Form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <field name="company" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="notes" />
+                        <field name="image" widget="image"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_tyre" model="ir.actions.act_window">
+        <field name="name">Tires</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vehicle.tyre</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to add a first tyre in your list.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="tyre_root" name="Tires" sequence="1" web_icon="new_market_place,static/description/icon.png"/>
+    <menuitem id="vehicle_tires" name="Tires" parent="tyre_root" action="action_tyre"/>
+        
+</odoo>

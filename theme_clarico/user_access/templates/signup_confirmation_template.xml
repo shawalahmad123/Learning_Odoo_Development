@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Confirmation Email Template -->
+    <template id="signup_confirmation">
+        <t t-call="website.layout">
+            <div class="container">
+                <div class="signup-common-div">
+                    <div class="block te_user_template_common">
+                        <h4 class="text-center">Verification email sent sucessfully!</h4>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Confirmation Quote Template -->
+    <template id="quote_confirmation">
+        <t t-call="website.layout">
+            <div class="container">
+                <div class="signup-common-div">
+                    <div class="block te_user_template_common">
+                        <h4 class="text-center">Quotation has been submitted sucessfully!</h4>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+
+    <!-- Not Confirmed Email Template -->
+    <template id="signup_not_valid_user">
+        <t t-call="website.layout">
+            <div class="container">
+                <div class="signup-common-div">
+                    <div class="block te_user_template_common">
+                        <h4 class="text-center text-danger">You have not verifiy your account</h4>
+                        <p class="text-center">Click on <i>Confirm Account</i> link to activate you account
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Account Activate successful Message -->
+    <template id="user_valid" name="User valid Message notification">
+        <t t-call="website.layout">
+            <div class="container">
+                <div class="signup-common-div">
+                    <div class="block te_user_template_common">
+                        <h4 class="text-center">Your account validate successfully, Now you can login With
+                            your credential using below link
+                        </h4>
+                        <p class="text-center">
+                            <a class="btn btn-primary te_theme_button" href="/web/login">Login</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

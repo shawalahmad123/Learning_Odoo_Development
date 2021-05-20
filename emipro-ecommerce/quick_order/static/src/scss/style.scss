@@ -1,0 +1,133 @@
+$mobile: "(max-width: 998px)";
+
+#search_table_render_here{
+  .table td, .table th{
+    border-width: 0px !important;
+  }
+}
+
+#table_order{
+  tbody tr:first-of-type{
+    td{
+      border-width: 0px !important;
+    }
+  }
+  .delete_product{
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+
+.panel-create{
+  border-width: 0px 0px 0px 2px !important;
+  border-style: solid;
+  font-size: 14px;
+  padding: 24px 12px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  background-color: white !important;
+  margin: 4px 0px;
+  p{
+    color: #728794;
+    margin-bottom: 0px;
+  }
+  &.alert-error{
+    border-color: red;
+  }
+  &.alert-success{
+    border-color: green;
+  }
+}
+
+.hover_button .custom-scroll-bar{
+  padding: 4px;
+  max-height: 350px;
+  min-height: 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-left: -65%;
+  width: 250px;
+  .li-content >.row{
+    margin: 0px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #create_new_sp_list {
+    padding: 4px;
+    label {
+      font-weight: bold;
+      margin-bottom: 0px;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid #ebebeb;
+    }
+  }
+}
+
+.modal-variants {
+  .variants-c {
+    padding: 0px 32px;
+    .variants-s {
+      display: flex;
+      .badge {
+        margin-right: 8px;
+      }
+    }
+    .select_all_variants, .deselect-variants {
+      input {visibility: hidden;}
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #273238;
+      padding: 6px 8px;
+      input:checked ~ .check-modal {
+        background-image: url("./check-modal.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 15px 15px;
+        border: 1px solid #428bca;
+      }
+      .check-modal{
+        position: absolute;
+        left: 0;
+        height: 15px;
+        width: 15px;
+        background-color: white;
+        border: 1px solid #737373;
+      }
+      .badge {
+        background-color: #428bca !important;
+      }
+    }
+    .select_all_variants {
+      padding: 0px 8px 8px 8px;;
+    }
+  }
+  .modal-footer {
+    flex-wrap: wrap;
+    p {
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
+  }
+}
+
+@media #{$mobile} {
+  .container-text {
+    > .row {
+      > .outer {
+        flex: 0 0 100%;
+        max-width: 100%;
+        &.order-1 {
+          order: 0 !important;
+          padding-top: 16px;
+          padding-bottom: 16px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}

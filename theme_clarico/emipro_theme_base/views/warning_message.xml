@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="warning_message_ept" model="ir.ui.view">
+        <field name="name">Warning Message</field>
+        <field name="model">warning.message</field>
+        <field name="arch" type="xml">
+            <form string="Warning">
+                <group>
+                    <p>
+                        Changes which are done from frontend edit feature in the header, footer, product and banner images will be lost after upgradation of theme.
+                        <div><b>Note:</b> This warning doesn't include dropped snippets in the pages.</div>
+                    </p>
+
+                </group>
+                <footer>
+                    <button name="process" string="_Apply" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

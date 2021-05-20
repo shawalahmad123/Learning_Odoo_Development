@@ -1,0 +1,12 @@
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- "License URL : <https://store.webkul.com/license.html/>" -->
+<odoo>
+	<data noupdate="1">
+		<record id="price_config_show" model="price.config.settings">
+			<field name="name">Default Price Config</field>
+			<field name="is_active">True</field>
+			<field name="global_price_visibility">show</field>
+		</record>
+	</data>
+</odoo>

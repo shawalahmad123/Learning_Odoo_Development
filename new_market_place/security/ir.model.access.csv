@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vehicle_vehicle,vehicle.vehicle,model_vehicle_vehicle,,1,1,1,1
+access_vehicle_tyre,vehicle.tyre,model_vehicle_tyre,,1,1,1,1
+

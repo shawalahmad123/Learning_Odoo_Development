@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	
+        <!-- Email template for new users that used a signup Conrirmation -->
+        <record id="mail_template_user_signup_confirmation" model="mail.template">
+            <field name="name">Signup: Confirmation</field>
+            <field name="model_id" ref="base.model_res_users"/>
+            <field name="email_from">"${object.company_id.name|safe}" &lt;${(object.company_id.email or user.email)|safe}&gt;</field>
+            <field name="email_to">${object.email|safe}</field>
+            <field name="subject">User Confirmation</field>
+            <field name="body_html" type="html">
+				<!-- <div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+				    <table cellspacing="0" cellpadding="0" style="width:600px;border-collapse:collapse;background:inherit;color:inherit">
+				        <tbody><tr>
+				            <td valign="center" width="200" style="padding:10px 10px 10px 5px;font-size: 12px">
+				                <img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${user.company_id.name}" />
+				            </td>
+				        </tr></tbody>
+				    </table>
+				</div> -->
+				<div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+				    <p style="color:#006A65">Hi ${object.name},</p>
+				    <p style="color:#006A65">
+				    	You successfully created your account
+				    </p>
+				    <p style="color:#006A65">
+				        From now on you can log in with: ${object.email}
+				    </p>
+				    <p style="color:#006A65">
+				        Please click on below link to activate your account.
+				    </p>
+				    <a href="/web/signup/confirmation?access_token=${object.access_token}" style="color:#ffffff!important;display:inline-block;font-weight:500;font-size:16px;line-height:42px;font-family:'Helvetica',Arial,sans-serif;width:auto;white-space:nowrap;height:42px;margin:12px 5px 12px 0;padding:0 22px;text-align:center;border:0;border-radius:3px;vertical-align:top;background-color:#006A65!important" target="_blank"><span style="display:inline;font-family:'Helvetica',Arial,sans-serif;text-decoration:none;font-weight:500;font-style:normal;font-size:16px;line-height:42px;border:none;color:#ffffff!important">Activate account</span></a>
+				    
+				    <p style="color:#006A65">Kind regards</p>
+				    <p style="color:#006A65">Team Emipro</p>
+				</div>
+			
+			</field>
+        </record>
+    </data>
+</odoo>

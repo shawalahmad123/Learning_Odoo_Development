@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <!-- Copyright (c) 2018-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+    <!-- See LICENSE file for full copyright and licensing details. -->
+
+    <record id="res_config_setting_quick_order_form" model="ir.ui.view">
+      <field name="name">res.config.setting.quick.order.form</field>
+      <field name="model">res.config.settings</field>
+      <field name="inherit_id" ref="website.res_config_settings_view_form" />
+      <field name="arch" type="xml" >
+        <div id="webmaster_settings" position="after">
+          <h2>Quick Order</h2>
+          <div>
+            <group>
+              <div class="col-xs-11 col-md-11" >
+                  <div class="row">
+                    <div class="col-xs-8 col-md-8"><strong><h5>You can configure translatable message to be displayed on website</h5></strong></div>
+                    <div class="col-xs-2 col-md-3">
+                      <button string=' Quick Order Messages' type="object" name="get_quick_form" class="oe_link fa fa-language btn-lg" />
+                    </div>
+                  </div>
+              </div>
+            </group>
+          </div>
+        </div>
+      </field>
+    </record>
+  </data>
+</odoo>
